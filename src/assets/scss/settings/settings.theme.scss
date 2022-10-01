@@ -1,0 +1,109 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+$f1-data-color-red: (
+    50: #ffe8e6,
+    100: #ffc8b8,
+    200: #ffa38b,
+    300: #ff7c5c,
+    400: #ff5937,
+    500: #ff2b0e,
+    600: #ff2308,
+    700: #ff1601,
+    800: #f10000,
+    900: #da0000,
+    contrast: (
+        50: rgba(black, 0.87),
+        100: rgba(black, 0.87),
+        200: rgba(black, 0.87),
+        300: rgba(black, 0.87),
+        400: rgba(white, 0.87),
+        500: rgba(white, 0.87),
+        600: rgba(white, 0.87),
+        700: rgba(white, 0.87),
+        800: rgba(white, 0.87),
+        900: rgba(white, 0.87),
+    )
+);
+
+$f1-data-color-black: (
+    50: #f9f9ff,
+    100: #f4f3ff,
+    200: #ececf7,
+    300: #dedee9,
+    400: #bbbac5,
+    500: #9c9ba6,
+    600: #73727c,
+    700: #5f5f68,
+    800: #404049,
+    900: #1f1f27,
+    contrast: (
+        50: rgba(black, 0.87),
+        100: rgba(black, 0.87),
+        200: rgba(black, 0.87),
+        300: rgba(black, 0.87),
+        400: rgba(black, 0.87),
+        500: rgba(white, 0.87),
+        600: rgba(white, 0.87),
+        700: rgba(white, 0.87),
+        800: rgba(white, 0.87),
+        900: rgba(white, 0.87)
+    )
+);
+
+$f1-data-color-purple: (
+    50: #f1e4ef,
+    100: #dcbdd9,
+    200: #c691c1,
+    300: #ae68a8,
+    400: #9d4b96,
+    500: #8c3285,
+    600: #802d7f,
+    700: #702777,
+    800: #62226e,
+    900: #481b5c,
+    contrast: (
+        50: rgba(black, 0.87),
+        100: rgba(black, 0.87),
+        200: rgba(black, 0.87),
+        300: rgba(white, 0.87),
+        400: rgba(white, 0.87),
+        500: rgba(white, 0.87),
+        600: rgba(white, 0.87),
+        700: rgba(white, 0.87),
+        800: rgba(white, 0.87),
+        900: rgba(white, 0.87)
+    )
+);
+
+$f1-data-light-primary: mat.define-palette($f1-data-color-red, 700);
+$f1-data-light-accent: mat.define-palette($f1-data-color-black, 900);
+$f1-data-light-warn: mat.define-palette($f1-data-color-purple, 700);
+
+$f1-data-dark-primary: mat.define-palette($f1-data-color-red, 700);
+$f1-data-dark-accent: mat.define-palette($f1-data-color-black, 900);
+$f1-data-dark-warn: mat.define-palette($f1-data-color-purple, 700);
+
+$f1-data-light-theme: mat.define-light-theme((
+  color: (
+    primary: $f1-data-light-primary,
+    accent: $f1-data-light-accent,
+    warn: $f1-data-light-warn
+  )
+));
+
+$f1-data-dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $f1-data-dark-primary,
+    accent: $f1-data-dark-accent,
+    warn: $f1-data-dark-warn
+  )
+));
+
+.f1-data-light-theme {
+  @include mat.all-component-themes($f1-data-light-theme);
+}
+
+.f1-data-dark-theme {
+  @include mat.all-component-themes($f1-data-dark-theme);
+}
