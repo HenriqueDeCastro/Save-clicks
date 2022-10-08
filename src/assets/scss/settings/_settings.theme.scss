@@ -1,0 +1,20 @@
+@use '@angular/material' as mat;
+@use 'settings.material-theme' as material-theme;
+@use 'settings.colors' as colors;
+@include mat.core();
+
+.light-theme {
+  @include mat.all-component-themes(material-theme.$light-theme);
+}
+
+.dark-theme {
+  @include mat.all-component-colors(material-theme.$dark-theme);
+}
+
+@each $name, $theme in colors.$themes {
+  .#{$name}-theme {
+    @each $key, $value in $theme {
+        --#{$key}: #{$value};
+    }
+  }
+}

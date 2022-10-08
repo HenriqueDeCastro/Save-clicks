@@ -1,0 +1,44 @@
+@use '/src/assets/scss/tools/tools.colors.scss' as colors;
+
+.doc-app {
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+main {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 950px) {
+  .doc-app {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:"nav-menu header-toolbar"
+                        "nav-menu main-routes";
+  }
+
+  header {
+    grid-area: header-toolbar;
+  }
+
+  nav {
+    grid-area: nav-menu;
+  }
+
+  main {
+    grid-area: main-routes;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .doc-app {
+      display: grid;
+      grid-template-columns: auto 1fr;
+  }
+}

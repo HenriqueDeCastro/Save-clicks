@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'f1-data';
+
+  constructor() {
+    let body = document.getElementsByTagName('body')[0];
+    body.classList.add("dark-theme");   //add the class
+  }
+
 }

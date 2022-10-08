@@ -1,0 +1,18 @@
+@use '/src/assets/scss/tools/tools.colors.scss' as colors;
+
+.menu-container {
+  background-color: colors.define-color(bg-secondary);
+  display: flex;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 950px) {
+  .menu-container {
+    bottom: unset;
+    width: unset;
+    height: 100%;
+  }
+}
