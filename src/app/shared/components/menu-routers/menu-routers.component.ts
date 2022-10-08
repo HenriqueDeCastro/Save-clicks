@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faMessage } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-menu-routers',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu-routers.component.scss']
 })
 export class MenuRoutersComponent implements OnInit {
+
+  faMessage = faMessage;
 
   constructor() { }
 

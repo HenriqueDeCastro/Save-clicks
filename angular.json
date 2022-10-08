@@ -24,11 +24,10 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/scss/index.scss"
             ],
             "scripts": []
           },
@@ -81,22 +80,6 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "f1-data:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-builders/jest:run",
-          "options": {
-            "polyfills": ["src/polyfills.ts"],
-            "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": ["scss"],
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
           }
         }
       }

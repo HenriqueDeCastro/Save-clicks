@@ -11,3 +11,11 @@
     width: 5rem;
   }
 }
+
+@media screen and (min-width: 950px) {
+  .toolbar {
+    &__img {
+      width: 7.5rem;
+    }
+  }
+}
