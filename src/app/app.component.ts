@@ -7,9 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  constructor() {
-    let body = document.getElementsByTagName('body')[0];
-    body.classList.add("dark-theme");   //add the class
-  }
+  constructor() {}
 
 }
