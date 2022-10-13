@@ -7,6 +7,7 @@
   bottom: 0;
   height: 56px;
   width: 100%;
+  border-top: 1px solid #656565;
 
   &__img {
     display: none;
@@ -27,12 +28,14 @@
   .menu-container {
     bottom: unset;
     width: unset;
+    justify-content: unset;
+    border-top: unset;
     height: 100vh;
     min-width: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: unset;
+    border-right: 1px solid #656565;
 
     &__img {
       display: block;
