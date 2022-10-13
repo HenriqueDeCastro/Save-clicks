@@ -1,12 +1,22 @@
 $themes: (
   light: (
-    'bg-primary': white,
+    // general
+    'bg-primary': #fff,
     'bg-secondary': #dadadb,
-    'font-primary': #18191a
+    'font-primary': #18191a,
+
+    // tooltip
+    'bg-tooltip': #18191A,
+    'font-tooltip': #fff
   ),
   dark: (
+    // general
     'bg-primary': #18191A,
-    'bg-secondary': #424242,
-    'font-primary': white
+    'bg-secondary': #242526,
+    'font-primary': #fff,
+
+    // tooltip
+    'bg-tooltip': #fff,
+    'font-tooltip': #18191a
   )
 );

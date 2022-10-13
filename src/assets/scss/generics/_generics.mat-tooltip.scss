@@ -1,0 +1,9 @@
+@use '/src/assets/scss/tools/tools.colors.scss' as colors;
+
+.mat-tooltip {
+  &.tooltip-theme{
+      font-size: 0.85rem;
+      color: colors.define-color(font-tooltip);
+      background-color: colors.define-color(bg-tooltip) !important;
+    }
+}

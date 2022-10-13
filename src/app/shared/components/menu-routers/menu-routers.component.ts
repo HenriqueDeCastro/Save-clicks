@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { faMessage } from '@fortawesome/free-regular-svg-icons';
+import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
+import { ButtonRouters } from '../../classes/interfaces';
 
 @Component({
   selector: 'app-menu-routers',
@@ -8,9 +9,21 @@ import { faMessage } from '@fortawesome/free-regular-svg-icons';
 })
 export class MenuRoutersComponent implements OnInit {
 
-  faMessage = faMessage;
+  buttonsRouters: ButtonRouters[];
+  buttonTheme: ButtonRouters;
 
-  constructor() { }
+  constructor() {
+    this.buttonsRouters = [
+      {
+        icon: faMoon,
+        tooltip: 'Theme'
+      }
+    ];
+    this.buttonTheme = {
+      icon: faMoon,
+      tooltip: 'Theme'
+    }
+  }
 
   ngOnInit(): void {
   }

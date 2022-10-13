@@ -1,5 +1,13 @@
 <div class="menu-container">
-  <fa-icon [icon]="faMessage"></fa-icon>
-  <fa-icon [icon]="faMessage"></fa-icon>
-  <fa-icon [icon]="faMessage"></fa-icon>
+  <img src="assets/img/logo.svg" alt="Logo F1 Data" class="menu-container__img cursor-pointer">
+
+  <ng-container *ngFor="let button of buttonsRouters">
+      <div class="menu-container__buttons-router">
+        <app-button-routers [data]="button"></app-button-routers>
+      </div>
+
+    </ng-container>
+    <div class="menu-container__buttons-theme">
+      <app-button-routers [data]="buttonTheme"></app-button-routers>
+    </div>
 </div>
