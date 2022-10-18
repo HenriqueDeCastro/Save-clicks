@@ -3,19 +3,17 @@
 @use 'settings.colors' as colors;
 @include mat.core();
 
-@media (prefers-color-scheme: light) {
+.color-scheme-light {
   @include mat.all-component-themes(material-theme.$light-theme);
-  :root {
-    @each $key, $value in map-get(colors.$themes, 'light') {
-        --#{$key}: #{$value};
-    }
-  }
 }
 
-@media (prefers-color-scheme: dark) {
+.color-scheme-dark {
   @include mat.all-component-colors(material-theme.$dark-theme);
-  :root {
-    @each $key, $value in map-get(colors.$themes, 'dark') {
+}
+
+@each $name, $theme in colors.$themes {
+  .color-scheme-#{$name} {
+    @each $key, $value in $theme {
         --#{$key}: #{$value};
     }
   }

@@ -14,8 +14,6 @@
 
 @media screen and (min-width: 1080px) {
   .toolbar {
-    &__img {
-      width: 7.5rem;
-    }
+    display: none;
   }
 }

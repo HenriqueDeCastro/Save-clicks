@@ -4,11 +4,15 @@
     </header>
 
     <nav>
-      <app-menu-routers></app-menu-routers>
+      <app-nav></app-nav>
     </nav>
 
     <main>
       <router-outlet></router-outlet>
+      <ng-container *ngIf="isFontsLoaded">
+        testeeeeeeeee eeeenfirnfrof fornffoinfreiofneof fjfervnfiofn Drivers Seasons {{isFontsLoaded}}
+      </ng-container>
+
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br>

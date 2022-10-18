@@ -2,7 +2,7 @@
 
 .button-routers {
   background-color: transparent;
-  color: colors.define-color(font-primary);
+  color: colors.define-color(font-secondary);
   border: 0;
   padding: 0.75rem;
   width: 100%;
@@ -12,18 +12,32 @@
   align-items: center;
 
   &__icon {
-    font-size: 1.5rem;
+    font-size: 34px;
+  }
+
+  &__label {
+    display: none;
   }
 }
 
 @media screen and (min-width: 1080px) {
   .button-routers {
     max-height: 200px;
-    margin: 0.75rem 0rem;
     height: unset;
 
     &__icon {
-      font-size: 1.25rem;
+      font-size: 28px;
+    }
+
+    &__label {
+      display: block;
+      margin: 0.35rem 0rem;
+      font-size: 0.75rem;
+    }
+
+    &:hover {
+      background-color: colors.define-color(bg-secondary);
+      filter: invert(9%);
     }
   }
 }

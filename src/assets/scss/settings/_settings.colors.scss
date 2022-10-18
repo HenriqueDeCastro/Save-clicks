@@ -1,19 +1,27 @@
 $themes: (
   light: (
-    // general
-    'bg-primary': #fff,
-    'bg-secondary': #dadadb,
+    // background
+    'bg-primary': #f2f3f5,
+    'bg-secondary': #fff,
+
+    // font
     'font-primary': #18191a,
+    'font-secondary': #5f6368,
+    'font-tertiary': #e5e5e5,
 
     // tooltip
     'bg-tooltip': #18191A,
     'font-tooltip': #fff
   ),
   dark: (
-    // general
-    'bg-primary': #18191A,
-    'bg-secondary': #242526,
+    // background
+    'bg-primary': #232323,
+    'bg-secondary': #18191A,
+
+    // font
     'font-primary': #fff,
+    'font-secondary': #9aa0a6,
+    'font-tertiary': #363636,
 
     // tooltip
     'bg-tooltip': #fff,
