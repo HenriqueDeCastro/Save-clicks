@@ -1,7 +1,6 @@
 @use '/src/assets/scss/tools/tools.colors.scss' as colors;
 
 .toolbar {
-  background-color: colors.define-color(bg-primary);
   display: flex;
   align-items: center;
   justify-content: center;

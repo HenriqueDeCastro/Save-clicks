@@ -8,6 +8,20 @@
 
 main {
   padding: 0.5rem;
+  min-height: 100vh;
+}
+
+footer {
+  margin-bottom: 56px;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+.scroll {
+  overflow: visible;
+  overflow: auto;
 }
 
 @media screen and (min-width: 1080px) {
@@ -16,7 +30,8 @@ main {
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas:"nav-menu header-toolbar"
-                        "nav-menu main-routes";
+                        "nav-menu main-routes"
+                        "nav-menu footer";
   }
 
   header {
@@ -29,5 +44,12 @@ main {
 
   main {
     grid-area: main-routes;
+    padding: 2rem;
+    top: 0;
+  }
+
+  footer {
+    grid-area: footer;
+    margin-bottom: 0;
   }
 }

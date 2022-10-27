@@ -1,0 +1,41 @@
+@use '/src/assets/scss/tools/tools.colors.scss' as colors;
+
+.cards-container {
+  display: grid;
+  grid-column: 2;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+
+  &__card {
+    border-radius: 12px;
+    padding: 0.75rem;
+    color: colors.define-color(font-primary);
+
+    &__icon {
+      font-size: 28px;
+    }
+
+    &__title {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    &__subtitle {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .cards-container {
+    grid-column: 3;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .cards-container {
+    grid-column: 4;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,15 +1,19 @@
 @use '/src/assets/scss/tools/tools.colors.scss' as colors;
 
-.button-routers {
+a {
+  text-decoration: none;
+}
+
+.nav-button {
   background-color: transparent;
-  color: colors.define-color(font-secondary);
+  color: colors.define-color(font-primary);
   border: 0;
   padding: 0.75rem;
-  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 10px;
 
   &__icon {
     font-size: 34px;
@@ -21,9 +25,10 @@
 }
 
 @media screen and (min-width: 1080px) {
-  .button-routers {
+  .nav-button {
     max-height: 200px;
     height: unset;
+    margin: 0rem 0.5rem;
 
     &__icon {
       font-size: 28px;
@@ -31,13 +36,13 @@
 
     &__label {
       display: block;
-      margin: 0.35rem 0rem;
-      font-size: 0.75rem;
+      margin: 0;
+      font-size: 0.7rem;
+      font-weight: 300;
     }
 
     &:hover {
-      background-color: colors.define-color(bg-secondary);
-      filter: invert(9%);
+      background-color: colors.define-color(bg-hover);
     }
   }
 }

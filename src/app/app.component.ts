@@ -7,11 +7,15 @@ import { ThemingService } from '@services/services/theming/theming.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  isFontsLoaded!: boolean;
+
+  scroll: boolean;
 
   constructor(private themingService: ThemingService) {
     this.themingService.load();
-    document.fonts.ready.then(() => (this.isFontsLoaded = true));
+    this.scroll = true;
   }
 
+  receiveScroll(event: boolean): void {
+    this.scroll = event;
+  }
 }

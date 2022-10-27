@@ -1,6 +1,19 @@
-<button class="button-routers cursor-pointer">
-  <div class="button-routers__icon">
-    <mat-icon aria-hidden="false" class="material-icons-outlined" [inline]="true" [attr.fontIcon]="icon"></mat-icon>
-  </div>
-  <p class="button-routers__label">{{label}}</p>
-</button>
+<ng-container *ngIf="isLink; else button">
+  <a class="nav-button cursor-pointer" [routerLink]="route" #routerLink="routerLinkActive" routerLinkActive>
+    <div class="nav-button__icon">
+      <mat-icon aria-hidden="false" [ngClass]="routerLink.isActive? 'material-icons': 'material-icons-outlined'" [inline]="true" [attr.fontIcon]="icon"></mat-icon>
+    </div>
+    <span class="nav-button__label">{{label}}</span>
+  </a>
+</ng-container>
+
+<ng-template #button>
+  <button class="nav-button cursor-pointer">
+    <div class="nav-button__icon">
+      <mat-icon aria-hidden="false" class="material-icons-outlined" [inline]="true" [attr.fontIcon]="icon"></mat-icon>
+    </div>
+    <span class="nav-button__label">{{label}}</span>
+  </button>
+</ng-template>
+
+

@@ -8,4 +8,6 @@ import { Component, Input } from '@angular/core';
 export class NavButtonComponent {
   @Input() icon!: string;
   @Input() label!: string;
+  @Input() isLink!: boolean;
+  @Input() route!: string;
 }

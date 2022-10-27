@@ -1,16 +1,16 @@
-<div class="menu-container">
-  <img src="assets/img/logo.svg" alt="Logo F1 Data" class="menu-container__img cursor-pointer">
+<div class="nav-container">
+  <img src="assets/img/logo.svg" alt="Logo F1 Data" class="nav-container__img cursor-pointer">
 
-  <div class="menu-container__buttons-router">
-    <app-nav-button label="Home" icon="&#xe88a;" class="menu-container__buttons-router__home"></app-nav-button>
-    <app-nav-button label="Drivers" icon="&#xea2d;"></app-nav-button>
-    <app-nav-button label="More Options" icon="&#xe5d2;" (click)="moreOptions()" class="menu-container__buttons-router__theme"></app-nav-button>
-    <app-nav-button label="Constructors" icon="&#xe613;"></app-nav-button>
-    <app-nav-button label="Circuits" icon="&#xe80b;" class="menu-container__buttons-router__circuits"></app-nav-button>
-    <app-nav-button label="Seasons" icon="&#xebcc;"></app-nav-button>
+  <div class="nav-container__buttons-router">
+    <app-nav-button label="Home" icon="&#xe88a;" [isLink]="true" route="/home" class="nav-container__buttons-router__home"></app-nav-button>
+    <app-nav-button label="Drivers" icon="&#xea2d;" [isLink]="true" route="/theme"></app-nav-button>
+    <app-nav-button label="More Options" icon="&#xe5d2;" (click)="moreOptions()" class="nav-container__buttons-router__theme"></app-nav-button>
+    <app-nav-button label="Constructors" icon="&#xe613;" [isLink]="true" route="/theme"></app-nav-button>
+    <app-nav-button label="Circuits" icon="&#xe80b;" [isLink]="true" route="/theme" class="nav-container__buttons-router__circuits"></app-nav-button>
+    <app-nav-button label="Seasons" icon="&#xebcc;" [isLink]="true" route="/theme"></app-nav-button>
   </div>
 
-  <div [ngClass]="showMoreOptions? 'nav-container nav-container--active': 'nav-container'">
+  <div [ngClass]="showMoreOptions? 'sidebar-container sidebar-container--active': 'sidebar-container'">
     <app-nav-button label="More Options" icon="&#xe896;" (click)="moreOptions()"></app-nav-button>
   </div>
 </div>

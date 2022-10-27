@@ -1,14 +1,13 @@
 @use '/src/assets/scss/tools/tools.colors.scss' as colors;
 
-.menu-container {
-  background-color: colors.define-color(bg-secondary);
-  color: colors.define-color(font-tertiary);
+.nav-container {
+  background-color: colors.define-color(bg-primary);
   overflow: hidden;
   position: fixed;
   bottom: 0;
   height: 56px;
   width: 100%;
-  border-top: 1px solid;
+  z-index: 1000;
 
   &__img {
     display: none;
@@ -26,13 +25,13 @@
   }
 }
 
-.nav-container {
+.sidebar-container {
   position: fixed;
   bottom: -100vh;
   height: 100vh;
   width: 100vw;
   transition: .50s;
-  background-color: colors.define-color(bg-secondary);
+  background-color: colors.define-color(bg-hover);
 
   &--active {
     bottom: 0;
@@ -41,22 +40,21 @@
 }
 
 @media screen and (min-width: 1080px) {
-  .menu-container {
-    position: unset;
+  .nav-container {
     bottom: unset;
-    width: unset;
     justify-content: unset;
-    border-top: unset;
     height: 100vh;
     width: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-right: 1px solid;
+    position: sticky;
+    top: 0;
 
     &__img {
       display: block;
-      width: 85px;
+      width: 70px;
+      margin-top: 0.5rem;
     }
 
     &__buttons-router {
@@ -71,15 +69,17 @@
 
       &__theme {
         margin-top: auto;
+        margin-bottom: 0.5rem;
         order: 1;
       }
     }
   }
 
-  .nav-container {
+  .sidebar-container {
     position: fixed;
     bottom: unset;
     left: -100vw;
+    top: 0;
 
     &--active {
       bottom: unset;
