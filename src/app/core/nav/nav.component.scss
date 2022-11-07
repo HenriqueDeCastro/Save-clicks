@@ -1,89 +1,48 @@
 @use '/src/assets/scss/tools/tools.colors.scss' as colors;
 
-.nav-container {
-  background-color: colors.define-color(bg-primary);
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  height: 56px;
-  width: 100%;
-  z-index: 1000;
+.button-drawer, .button-theme, .button-circuits {
+  display: none;
+}
 
-  &__img {
-    display: none;
-  }
+.buttons-navigation-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  height: 100%;
+}
 
-  &__buttons-router {
+@media screen and (min-width: 960px) {
+  .button-drawer {
+    margin-top: 20px;
+    display: block;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-
-    &__circuits {
-      display: none;
-    }
+    justify-content: center;
   }
-}
 
-.sidebar-container {
-  position: fixed;
-  bottom: -100vh;
-  height: 100vh;
-  width: 100vw;
-  transition: .50s;
-  background-color: colors.define-color(bg-hover);
-
-  &--active {
-    bottom: 0;
-    transition: .50s;
+  .button-theme {
+    display: block;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
   }
-}
 
-@media screen and (min-width: 1080px) {
-  .nav-container {
-    bottom: unset;
-    justify-content: unset;
-    height: 100vh;
-    width: 100px;
+  .button-circuits {
+    display: block;
+  }
+
+  .buttons-navigation-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    position: sticky;
-    top: 0;
+    height: auto;
 
-    &__img {
+    &__circuits {
       display: block;
-      width: 70px;
-      margin-top: 0.5rem;
     }
 
-    &__buttons-router {
-      flex-direction: column;
-      justify-content: center;
-      padding: 1rem 0rem 0rem;
-      flex-grow: 1;
-
-      &__circuits {
-        display: block;
-      }
-
-      &__theme {
-        margin-top: auto;
-        margin-bottom: 0.5rem;
-        order: 1;
-      }
-    }
-  }
-
-  .sidebar-container {
-    position: fixed;
-    bottom: unset;
-    left: -100vw;
-    top: 0;
-
-    &--active {
-      bottom: unset;
-      left: 0;
+    &__theme {
+      margin-bottom: auto;
+      margin-top: 20px;
+      order: -1;
     }
   }
 }

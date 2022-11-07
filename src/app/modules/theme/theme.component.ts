@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-theme',
+  selector: 'f1-data-theme',
   templateUrl: './theme.component.html',
   styleUrls: ['./theme.component.scss']
 })

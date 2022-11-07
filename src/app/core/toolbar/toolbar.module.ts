@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ToolbarComponent } from './toolbar.component';
+import { MdSysIconButtonModule } from 'src/app/shared/md-sys/md-sys-button/md-sys-icon-button/md-sys-icon-button.module';
+import { DrawerButtonModule } from 'src/app/shared/components/drawer-button/drawer-button.module';
 
 @NgModule({
   declarations: [ToolbarComponent],
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    MdSysIconButtonModule,
+    DrawerButtonModule
+  ],
   exports: [ToolbarComponent]
 })
 export class ToolbarModule { }

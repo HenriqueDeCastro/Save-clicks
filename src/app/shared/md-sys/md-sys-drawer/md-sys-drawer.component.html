@@ -1,0 +1,14 @@
+<div class="md-sys-drawer" [class.md-sys-drawer--active]="show">
+  <div class="md-sys-drawer__navigation-container">
+    <div class="md-sys-drawer__navigation-container__drawer-button">
+      <f1-data-drawer-button icon="&#xe9bd;"></f1-data-drawer-button>
+    </div>
+    <div class="md-sys-drawer__navigation-container__list">
+      <md-sys-nav-button label="Home" icon="&#xe88a;" route="/home" [extended]="true" (click)="changeStatusDrawer()"></md-sys-nav-button>
+      <md-sys-nav-button label="Drivers" icon="&#xea2d;" route="/theme" [extended]="true" (click)="changeStatusDrawer()"></md-sys-nav-button>
+      <md-sys-nav-button label="Teams" icon="&#xe613;" route="/not-found" [extended]="true" (click)="changeStatusDrawer()"></md-sys-nav-button>
+      <md-sys-nav-button label="Circuits" icon="&#xe80b;" route="/theme3" [extended]="true" (click)="changeStatusDrawer()"></md-sys-nav-button>
+      <md-sys-nav-button label="Seasons" icon="&#xebcc;" route="/theme4" [extended]="true" (click)="changeStatusDrawer()"></md-sys-nav-button>
+    </div>
+  </div>
+</div>

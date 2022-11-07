@@ -6,19 +6,20 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarModule } from './core/toolbar/toolbar.module';
 import { NavModule } from '@services/nav/nav.module';
+import { MdSysScrimModule } from './shared/md-sys/md-sys-scrim/md-sys-scrim.module';
+import { MdSysDrawerModule } from './shared/md-sys/md-sys-drawer/md-sys-drawer.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ToolbarModule,
-    NavModule
+    NavModule,
+    MdSysScrimModule,
+    MdSysDrawerModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

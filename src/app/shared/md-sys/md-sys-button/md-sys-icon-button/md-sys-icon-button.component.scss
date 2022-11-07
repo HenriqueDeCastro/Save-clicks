@@ -1,0 +1,25 @@
+@use '/src/assets/scss/tools/tools.colors.scss' as colors;
+
+.md-sys-icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background-color: transparent;
+  border-radius: 26px;
+  width: 48px;
+  height: 48px;
+
+  &--outline {
+    color: colors.define-color(--md-sys-color-outline);
+    border: 1px solid;
+  }
+
+  &:hover {
+    background: colors.define-color(--md-sys-color-on-surface-variant-2);
+  }
+
+  &:active {
+    background: colors.define-color(--md-sys-color-on-surface-variant-4);
+  }
+}

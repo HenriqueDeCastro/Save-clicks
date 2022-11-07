@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { MdSysNavButtonComponent } from './md-sys-nav-button.component';
+
+describe('MdSysNavButtonComponent', () => {
+  let component: MdSysNavButtonComponent;
+  let fixture: ComponentFixture<MdSysNavButtonComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ MdSysNavButtonComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(MdSysNavButtonComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

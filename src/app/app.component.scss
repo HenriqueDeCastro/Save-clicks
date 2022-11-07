@@ -1,3 +1,5 @@
+@use '/src/assets/scss/tools/tools.colors.scss' as colors;
+
 .doc-app {
   position: absolute;
   top: 0;
@@ -7,12 +9,12 @@
 }
 
 main {
-  padding: 0.5rem;
+  padding: 1rem;
   min-height: 100vh;
 }
 
 footer {
-  margin-bottom: 56px;
+  margin-bottom: 76px;
 }
 
 .noscroll {
@@ -24,7 +26,7 @@ footer {
   overflow: auto;
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 960px) {
   .doc-app {
     display: grid;
     grid-template-columns: auto 1fr;

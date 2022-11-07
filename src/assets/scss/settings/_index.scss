@@ -1,4 +1,5 @@
-@forward '_settings.body.scss';
-@forward '_settings.colors.scss';
-@forward 'settings.material-theme';
-@forward '_settings.theme.scss';
+@forward './settings.body';
+@forward './settings.colors';
+@forward './settings.theme';
+@forward './settings.tokens';
+@forward './settings.typography';

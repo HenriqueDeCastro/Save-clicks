@@ -1,13 +1,13 @@
-@use '/src/assets/scss/settings/settings.colors' as colors;
+//@use '/src/assets/scss/settings/settings.colors' as colors;
 
 @function define-color($key) {
-  $color: var(--#{$key});
+  $color: var(#{$key});
 
-  @each $name, $theme in colors.$themes {
-    @if not map-has-key($theme, $key) {
-      @error "Color `#{$key}` not found in theme #{name}";
-    }
-  }
+  // @each $name, $theme in colors.$themes {
+  //   @if not map-has-key($theme, $key) {
+  //     @error "Color `#{$key}` not found in theme #{name}";
+  //   }
+  // }
 
   @return $color;
 }

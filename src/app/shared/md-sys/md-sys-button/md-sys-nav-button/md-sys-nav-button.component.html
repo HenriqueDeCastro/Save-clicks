@@ -1,0 +1,39 @@
+<ng-container *ngIf="extended; else compact">
+  <a
+    class="md-sys-nav-button-extended cursor-pointer"
+    [class.md-sys-nav-button-extended--active]="routerLink.isActive"
+    [routerLink]="route"
+    #routerLink="routerLinkActive"
+    routerLinkActive>
+    <span
+      class="md-sys-nav-button-extended__icon"
+      [ngClass]="routerLink.isActive? 'on-secondary-container-text material-icons': 'on-surface-variant-text material-icons-outlined'">
+        {{icon}}
+      </span>
+    <span class="title-medium" [ngClass]="routerLink.isActive? 'on-secondary-container-text' : 'on-surface-variant-text'">
+        {{label}}
+    </span>
+  </a>
+</ng-container>
+
+<ng-template #compact>
+  <a
+    class="md-sys-nav-button cursor-pointer"
+    [class.md-sys-nav-button--active]="routerLink.isActive"
+    [routerLink]="route"
+    #routerLink="routerLinkActive"
+    routerLinkActive>
+    <div class="md-sys-nav-button__icon-container">
+      <div class="md-sys-nav-button__icon-container__background" [class.md-sys-nav-button__icon-container__background--active]="routerLink.isActive">
+      </div>
+      <span
+        class="md-sys-nav-button__icon-container__icon"
+        [ngClass]="routerLink.isActive? 'on-secondary-container-text material-icons': 'on-surface-variant-text material-icons-outlined'">
+          {{icon}}
+       </span>
+    </div>
+    <span class="label-medium md-sys-nav-button__label" [ngClass]="routerLink.isActive? 'md-sys-nav-button__label--active on-surface-text' : 'on-surface-variant-text'">
+        {{label}}
+    </span>
+  </a>
+</ng-template>

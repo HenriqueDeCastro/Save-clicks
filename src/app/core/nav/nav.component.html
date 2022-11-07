@@ -1,16 +1,18 @@
-<div class="nav-container">
-  <img src="assets/img/logo.svg" alt="Logo F1 Data" class="nav-container__img cursor-pointer">
-
-  <div class="nav-container__buttons-router">
-    <app-nav-button label="Home" icon="&#xe88a;" [isLink]="true" route="/home" class="nav-container__buttons-router__home"></app-nav-button>
-    <app-nav-button label="Drivers" icon="&#xea2d;" [isLink]="true" route="/theme"></app-nav-button>
-    <app-nav-button label="More Options" icon="&#xe5d2;" (click)="moreOptions()" class="nav-container__buttons-router__theme"></app-nav-button>
-    <app-nav-button label="Constructors" icon="&#xe613;" [isLink]="true" route="/theme"></app-nav-button>
-    <app-nav-button label="Circuits" icon="&#xe80b;" [isLink]="true" route="/theme" class="nav-container__buttons-router__circuits"></app-nav-button>
-    <app-nav-button label="Seasons" icon="&#xebcc;" [isLink]="true" route="/theme"></app-nav-button>
+<md-sys-navigation>
+  <div class="button-drawer">
+    <f1-data-drawer-button icon="&#xe5d2;"></f1-data-drawer-button>
   </div>
 
-  <div [ngClass]="showMoreOptions? 'sidebar-container sidebar-container--active': 'sidebar-container'">
-    <app-nav-button label="More Options" icon="&#xe896;" (click)="moreOptions()"></app-nav-button>
+  <div class="buttons-navigation-container">
+    <md-sys-nav-button label="Home" icon="&#xe88a;" route="/home"></md-sys-nav-button>
+    <md-sys-nav-button label="Drivers" icon="&#xea2d;" route="/theme"></md-sys-nav-button>
+    <md-sys-nav-button label="Teams" icon="&#xe613;" route="/not-found"></md-sys-nav-button>
+    <md-sys-nav-button label="Circuits" icon="&#xe80b;" route="/theme3" class="button-circuits"></md-sys-nav-button>
+    <md-sys-nav-button label="Seasons" icon="&#xebcc;" route="/theme4"></md-sys-nav-button>
   </div>
-</div>
+
+  <div class="button-theme">
+    <f1-data-theme-button></f1-data-theme-button>
+  </div>
+
+</md-sys-navigation>

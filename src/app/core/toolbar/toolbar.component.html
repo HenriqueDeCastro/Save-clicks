@@ -1,3 +1,6 @@
 <div class="toolbar">
-  <img src="assets/img/logo.svg" alt="Logo F1 Data" class="toolbar__img cursor-pointer">
+  <f1-data-drawer-button class="toolbar__button-drawer" icon="&#xe5d2;"></f1-data-drawer-button>
+  <ng-container *ngIf="currentTheme$ | async as currentTheme">
+    <img src="assets/img/logo-{{currentTheme}}-theme.svg" alt="Logo F1 Data" class="toolbar__img cursor-pointer">
+  </ng-container>
 </div>
