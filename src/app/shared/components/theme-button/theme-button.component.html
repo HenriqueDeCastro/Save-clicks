@@ -1,1 +1,11 @@
-<md-sys-icon-button icon="&#xe51c;" [outline]="true"></md-sys-icon-button>
+<ng-container *ngIf="currentTheme$ | async as currentTheme">
+  <ng-container *ngIf="extended; else compact">
+    <button class="theme-button-extended on-surface-variant-text cursor-pointer" (click)="changeTheme()">
+      <span class="theme-button-extended__icon material-icons-outlined">{{currentTheme == 'dark'? '&#xe518;' : '&#xe51c;'}}</span>
+      <span class="theme-button-extended__label title-medium">Switch to {{currentTheme == 'dark'? 'light' : 'dark'}} mode</span>
+    </button>
+  </ng-container>
+  <ng-template #compact>
+    <md-sys-icon-button [icon]="currentTheme == 'dark'? '&#xe518;' : '&#xe51c;'" [outline]="true" (click)="changeTheme()"></md-sys-icon-button>
+  </ng-template>
+</ng-container>

@@ -43,11 +43,14 @@ export class ThemingService {
       this.renderer.addClass(document.body, this.colorSchemePrefix + this.colorSchemeSubject.value);
   }
 
-  update(scheme: string): void {
-      this.setColorScheme(scheme);
-      this.renderer.removeClass(document.body, this.colorSchemePrefix + (this.colorSchemeSubject.value === 'dark' ? 'light' : 'dark'));
-      //this.renderer.addClass(document.body, this.colorSchemePrefix + scheme);
+  update(): void {
+      this.setColorScheme(this.themeToApplied());
+      this.renderer.removeClass(document.body, this.colorSchemePrefix + this.themeToApplied());
       this.load();
+  }
+
+  themeToApplied(): string {
+    return this.colorSchemeSubject.value === 'dark' ? 'light' : 'dark';
   }
 
   currentActive(): Observable<string> {
