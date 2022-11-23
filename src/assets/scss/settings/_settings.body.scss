@@ -3,7 +3,12 @@
 html, body {
   height: 100%;
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: colors.define-color(bg-primary);
-  color: colors.define-color(font-primary);
+  font-family: "Google Sans Text", sans-serif;
+  background-color: colors.define-color(--md-sys-color-background);
+  color: colors.define-color(--md-sys-color-on-surface);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

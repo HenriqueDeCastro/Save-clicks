@@ -1,0 +1,30 @@
+@use '/src/assets/scss/tools/tools.colors.scss' as colors;
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 4px;
+
+  &__button-drawer {
+    margin-right: 6px;
+  }
+
+  &__img {
+    width: 48px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .toolbar {
+    padding: 10px 20px;
+
+    &__button-drawer {
+      display: none;
+    }
+
+    &__img {
+      width: 64px;
+    }
+  }
+}

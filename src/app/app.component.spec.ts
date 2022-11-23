@@ -1,8 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
+import { of } from 'rxjs';
 import { AppComponent } from './app.component';
-import { ToolbarModule } from './shared/components/toolbar/toolbar.module';
+import { NavModule } from './core/nav/nav.module';
+import { DrawerService } from './core/services/drawer/drawer.service';
+import { ScrimService } from './core/services/scrim/scrim.service';
+import { ThemingService } from './core/services/theming/theming.service';
+import { ToolbarModule } from './core/toolbar/toolbar.module';
+import { MdSysDrawerModule } from './shared/md-sys/md-sys-drawer/md-sys-drawer.module';
+import { MdSysScrimModule } from './shared/md-sys/md-sys-scrim/md-sys-scrim.module';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -10,13 +16,19 @@ describe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      declarations: [AppComponent],
       imports: [
         RouterTestingModule,
-        ToolbarModule
+        ToolbarModule,
+        NavModule,
+        MdSysScrimModule,
+        MdSysDrawerModule
       ],
-      declarations: [
-        AppComponent
-      ],
+      providers: [
+        ThemingService,
+        ScrimService,
+        DrawerService
+      ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
@@ -28,20 +40,19 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'f1-data'`, () => {
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('f1-data');
+  it('should display .noscroll when showDrawer$ is true', () => {
+    component.showDrawer$ = of(true);
+    fixture.detectChanges();
+    const noScrollElement = fixture.debugElement.nativeElement.querySelectorAll('.noscroll');
+    expect(noScrollElement).not.toBeNull();
+    expect(noScrollElement[0]).not.toBeNull();
   });
 
-  it('should have a app-toolbar', () => {
+  it('should display .scroll when showDrawer$ is false', () => {
+    component.showDrawer$ = of(false);
     fixture.detectChanges();
-    const headerElements = fixture.debugElement.queryAll(By.css('app-toolbar'));
-    expect(headerElements.length).toBe(1);
-  });
-
-  it('should have a router-outlet', () => {
-    fixture.detectChanges();
-    const routerOutletElements = fixture.debugElement.queryAll(By.css('router-outlet'));
-    expect(routerOutletElements[0].nativeElement).toBeTruthy();
+    const scrollElement = fixture.debugElement.nativeElement.querySelectorAll('.scroll');
+    expect(scrollElement).not.toBeNull();
+    expect(scrollElement[0]).not.toBeNull();
   });
 });

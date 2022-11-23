@@ -1,0 +1,44 @@
+@use '/src/assets/scss/tools/tools.colors.scss' as colors;
+
+.md-sys-drawer {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: -100vw;
+  height: 100vh;
+  width: 100vw;
+  max-width: 320px;
+  transition: .50s;
+  border-radius: 0px 16px 16px 0px;
+  background-color: colors.define-color(--md-sys-color-surface-2);
+  z-index: 2;
+  top: 0;
+
+  &--active {
+    left: 0;
+    transition: .50s;
+  }
+
+  &__navigation-container {
+    margin: 8px 8px auto;
+    padding-bottom: 24px;
+    overflow-y: auto;
+
+    &__drawer-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 8px;
+      margin-left: 4px;
+    }
+  }
+
+  &__theme-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+  }
+}

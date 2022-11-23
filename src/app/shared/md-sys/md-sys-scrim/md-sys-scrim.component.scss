@@ -1,0 +1,17 @@
+.md-sys-scrim {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.32);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 2;
+  transition: opacity 500ms, visibility 500ms;
+
+  &--visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 500ms, visibility 500ms;
+  }
+}

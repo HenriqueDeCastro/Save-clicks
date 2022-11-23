@@ -1,24 +1,40 @@
+@use '/src/assets/scss/tools/tools.colors.scss' as colors;
+
 .doc-app {
-  min-height: 100%;
-  width: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  transition: .50s;
 }
 
 main {
-  padding: 1rem;
+  padding: 10px;
+  min-height: 100vh;
 }
 
-@media screen and (min-width: 1080px) {
+footer {
+  margin-bottom: 76px;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+.scroll {
+  overflow: visible;
+  overflow: auto;
+}
+
+@media screen and (min-width: 960px) {
   .doc-app {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas:"nav-menu header-toolbar"
-                        "nav-menu main-routes";
+                        "nav-menu main-routes"
+                        "nav-menu footer";
   }
 
   header {
@@ -31,5 +47,12 @@ main {
 
   main {
     grid-area: main-routes;
+    padding: 20px;
+    top: 0;
+  }
+
+  footer {
+    grid-area: footer;
+    margin-bottom: 0;
   }
 }

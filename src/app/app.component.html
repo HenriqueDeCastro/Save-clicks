@@ -1,22 +1,24 @@
-<div class="doc-app">
+<ng-container *ngIf="{value: showDrawer$ | async} as showDrawer">
+  <div class="doc-app" [ngClass]="showDrawer.value? 'noscroll' : 'scroll'">
     <header>
-      <app-toolbar></app-toolbar>
+      <f1-data-toolbar></f1-data-toolbar>
     </header>
 
+    <ng-container *ngIf="{value: showScrim$ | async} as showScrim">
+      <md-sys-scrim [visible]="showScrim.value!"></md-sys-scrim>
+    </ng-container>
+
     <nav>
-      <app-menu-routers></app-menu-routers>
+      <f1-data-nav></f1-data-nav>
+      <md-sys-drawer [show]="showDrawer.value!"></md-sys-drawer>
     </nav>
 
     <main>
       <router-outlet></router-outlet>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </main>
 
-    <footer></footer>
-</div>
+    <footer>
+      © 2022 This website is unofficial and is not associated in any way with the Formula 1 companies. F1, FORMULA ONE, FORMULA 1, FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX and related marks are trade marks of Formula One Licensing B.V.
+    </footer>
+  </div>
+</ng-container>
