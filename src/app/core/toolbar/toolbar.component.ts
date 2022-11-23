@@ -1,6 +1,7 @@
 import { delay, Observable } from 'rxjs';
 import { Component } from '@angular/core';
-import { ThemingService } from '@services/services/theming/theming.service';
+import { ColorScheme } from 'src/app/shared/classes/types';
+import { ThemingService } from '../services/theming/theming.service';
 
 @Component({
   selector: 'f1-data-toolbar',
@@ -9,10 +10,9 @@ import { ThemingService } from '@services/services/theming/theming.service';
 })
 export class ToolbarComponent {
 
-  currentTheme$: Observable<string>;
+  currentTheme$: Observable<ColorScheme>;
 
   constructor(private themingService: ThemingService) {
-    this.currentTheme$ = this.themingService.currentActive().pipe(delay(0));
+    this.currentTheme$ = this.themingService.currentActive();
   }
-
 }

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DrawerService } from '@services/services/drawer/drawer.service';
+import { DrawerService } from 'src/app/core/services/drawer/drawer.service';
 
 @Component({
   selector: 'md-sys-drawer',

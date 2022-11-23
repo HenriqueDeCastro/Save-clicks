@@ -1,23 +1,45 @@
+import { RouterTestingModule } from '@angular/router/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { DrawerService } from 'src/app/core/services/drawer/drawer.service';
+import { DrawerButtonModule } from '../../components/drawer-button/drawer-button.module';
+import { ThemeButtonModule } from '../../components/theme-button/theme-button.module';
+import { MdSysNavButtonModule } from '../md-sys-button/md-sys-nav-button/md-sys-nav-button.module';
 
 import { MdSysDrawerComponent } from './md-sys-drawer.component';
 
 describe('MdSysDrawerComponent', () => {
   let component: MdSysDrawerComponent;
   let fixture: ComponentFixture<MdSysDrawerComponent>;
+  let service: DrawerService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MdSysDrawerComponent ]
+      declarations: [MdSysDrawerComponent],
+      imports: [
+        DrawerButtonModule,
+        MdSysNavButtonModule,
+        ThemeButtonModule,
+        RouterTestingModule
+      ],
+      providers: [DrawerService]
     })
     .compileComponents();
 
     fixture = TestBed.createComponent(MdSysDrawerComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    service = TestBed.inject(DrawerService);
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it(`${MdSysDrawerComponent.prototype.changeStatusDrawer.name}
+    should call change from drawerService`, () => {
+    const drawerServiceChangeSpy = jest.spyOn(service, 'change');
+    fixture.detectChanges();
+
+    component.changeStatusDrawer();
+    expect(drawerServiceChangeSpy).toHaveBeenCalled();
   });
 });

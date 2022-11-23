@@ -8,7 +8,7 @@ describe('MdSysNavigationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MdSysNavigationComponent ]
+      declarations: [MdSysNavigationComponent]
     })
     .compileComponents();
 

@@ -8,7 +8,7 @@ describe('MdSysScrimComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MdSysScrimComponent ]
+      declarations: [MdSysScrimComponent]
     })
     .compileComponents();
 

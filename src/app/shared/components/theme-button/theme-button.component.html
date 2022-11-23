@@ -1,11 +1,11 @@
-<ng-container *ngIf="currentTheme$ | async as currentTheme">
+<ng-container *ngIf="themeToApply$ | async as themeToApply">
   <ng-container *ngIf="extended; else compact">
-    <button class="theme-button-extended on-surface-variant-text cursor-pointer" (click)="changeTheme()">
-      <span class="theme-button-extended__icon material-icons-outlined">{{currentTheme == 'dark'? '&#xe518;' : '&#xe51c;'}}</span>
-      <span class="theme-button-extended__label title-medium">Switch to {{currentTheme == 'dark'? 'light' : 'dark'}} mode</span>
+    <button class="theme-button-extended on-surface-variant-text cursor-pointer" (click)="changeTheme(themeToApply)">
+      <span class="theme-button-extended__icon material-icons-outlined">{{themeToApply == 'dark'? '&#xe51c;' : '&#xe518;'}}</span>
+      <span class="theme-button-extended__label title-medium">Switch to {{themeToApply}} mode</span>
     </button>
   </ng-container>
   <ng-template #compact>
-    <md-sys-icon-button [icon]="currentTheme == 'dark'? '&#xe518;' : '&#xe51c;'" [outline]="true" (click)="changeTheme()"></md-sys-icon-button>
+    <md-sys-icon-button [icon]="themeToApply == 'dark'? '&#xe51c;': '&#xe518;'" [outline]="true" (click)="changeTheme(themeToApply)"></md-sys-icon-button>
   </ng-template>
 </ng-container>

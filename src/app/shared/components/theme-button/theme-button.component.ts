@@ -1,6 +1,7 @@
-import { ThemingService } from '@services/services/theming/theming.service';
 import { Component, Input } from '@angular/core';
 import { delay, Observable } from 'rxjs';
+import { ThemingService } from 'src/app/core/services/theming/theming.service';
+import { ColorScheme } from '../../classes/types';
 
 @Component({
   selector: 'f1-data-theme-button',
@@ -10,14 +11,13 @@ import { delay, Observable } from 'rxjs';
 export class ThemeButtonComponent {
 
   @Input() extended!: boolean;
-  currentTheme$: Observable<string>;
+  themeToApply$: Observable<ColorScheme>;
 
   constructor(private themingService: ThemingService) {
-    this.currentTheme$ = this.themingService.currentActive().pipe(delay(0));
+    this.themeToApply$ = this.themingService.toApply();
   }
 
-  changeTheme(): void {
-    this.themingService.update();
+  changeTheme(scheme: ColorScheme): void {
+    this.themingService.update(scheme);
   }
-
 }

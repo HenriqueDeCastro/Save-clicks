@@ -11,10 +11,6 @@ const routes: Routes = [
     loadChildren:() => import('./modules/not-found/not-found.module').then((m) => m.NotFoundModule)
   },
   {
-    path: 'theme',
-    loadChildren:() => import('./modules/theme/theme.module').then((m) => m.ThemeModule)
-  },
-  {
     path: '',
     pathMatch: 'full',
     redirectTo: 'home'

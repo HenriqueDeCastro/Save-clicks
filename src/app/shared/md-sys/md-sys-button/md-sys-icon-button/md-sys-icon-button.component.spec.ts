@@ -8,7 +8,7 @@ describe('MdSysIconButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MdSysIconButtonComponent ]
+      declarations: [MdSysIconButtonComponent]
     })
     .compileComponents();
 

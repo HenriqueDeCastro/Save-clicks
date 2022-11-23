@@ -7,11 +7,10 @@
   left: 0;
   right: 0;
   transition: .50s;
-
 }
 
 main {
-  padding: 1rem;
+  padding: 10px;
   min-height: 100vh;
 }
 
@@ -48,7 +47,7 @@ footer {
 
   main {
     grid-area: main-routes;
-    padding: 2rem;
+    padding: 20px;
     top: 0;
   }
 
