@@ -1,5 +1,7 @@
+@use '/src/assets/scss/tools/tools.colors.scss' as colors;
+
 .md-sys-navigation {
-  background-color: var(--md-sys-color-surface-2);
+  background-color: colors.define-color(--md-sys-color-surface-2);
   box-shadow: var(--md-sys-elevation-1);
   overflow: hidden;
   position: fixed;

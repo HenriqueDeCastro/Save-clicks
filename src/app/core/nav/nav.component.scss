@@ -1,3 +1,5 @@
+@use '/src/assets/scss/tools/tools.colors.scss' as colors;
+
 .button-drawer, .button-theme, .button-circuits {
   display: none;
 }
