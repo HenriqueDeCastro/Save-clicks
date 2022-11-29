@@ -1,0 +1,6 @@
+<div
+  class="md-sys-card-{{type}} md-sys-card-{{type}}--{{color}} cursor-pointer"
+  [class.md-sys-card-alert]="alert"
+  [ngClass]="[disabled ? 'md-sys-card-' + type + '--disabled': null]">
+  <ng-content></ng-content>
+</div>

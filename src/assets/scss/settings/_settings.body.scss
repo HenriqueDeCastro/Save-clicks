@@ -1,11 +1,9 @@
-@use '/src/assets/scss/tools/tools.colors.scss' as colors;
-
 html, body {
   height: 100%;
   margin: 0;
   font-family: "Google Sans Text", sans-serif;
-  background-color: colors.define-color(--md-sys-color-background);
-  color: colors.define-color(--md-sys-color-on-surface);
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-surface);
 }
 
 a {
