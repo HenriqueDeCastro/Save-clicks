@@ -1,3 +1,5 @@
+@use '/src/assets/scss/tools/tools.colors.scss' as colors;
+
 .md-sys-icon-button {
   display: flex;
   justify-content: center;
@@ -9,15 +11,15 @@
   height: 48px;
 
   &--outline {
-    color: var(--md-sys-color-outline);
+    color: colors.define-color(--md-sys-color-outline);
     border: 1px solid;
   }
 
   &:hover {
-    background: var(--md-sys-color-on-surface-variant-2);
+    background: colors.define-color(--md-sys-color-on-surface-variant-2);
   }
 
   &:active {
-    background: var(--md-sys-color-on-surface-variant-4);
+    background: colors.define-color(--md-sys-color-on-surface-variant-4);
   }
 }

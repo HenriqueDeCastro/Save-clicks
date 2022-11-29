@@ -1,3 +1,5 @@
+@use '/src/assets/scss/tools/tools.colors.scss' as colors;
+
 .md-sys-nav-button {
   display: flex;
   flex-direction: column;
@@ -29,7 +31,7 @@
       &--active {
         opacity: 1;
         transform: scaleX(1);
-        background-color: var(--md-sys-color-secondary-container);
+        background-color: colors.define-color(--md-sys-color-secondary-container);
       }
     }
   }
@@ -43,7 +45,7 @@
   }
 
   &:hover &__icon-container {
-    background: var(--md-sys-color-on-surface-variant-2);
+    background: colors.define-color(--md-sys-color-on-surface-variant-2);
 
     &__icon {
       font-weight: 600;
@@ -51,7 +53,7 @@
   }
 
   &:active &__icon-container {
-    background: var(--md-sys-color-on-surface-variant-4);
+    background: colors.define-color(--md-sys-color-on-surface-variant-4);
   }
 }
 
@@ -70,7 +72,7 @@
   }
 
   &--active {
-    background: var(--md-sys-color-secondary-container);
+    background: colors.define-color(--md-sys-color-secondary-container);
     pointer-events: none;
   }
 
@@ -83,7 +85,7 @@
   }
 
   &:active {
-    background: var(--md-sys-color-on-surface-variant-4);
+    background: colors.define-color(--md-sys-color-on-surface-variant-4);
   }
 }
 
