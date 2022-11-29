@@ -1,5 +1,3 @@
-@use '/src/assets/scss/tools/tools.colors.scss' as colors;
-
 .md-sys-drawer {
   display: flex;
   flex-direction: column;
@@ -10,7 +8,7 @@
   max-width: 320px;
   transition: .50s;
   border-radius: 0px 16px 16px 0px;
-  background-color: colors.define-color(--md-sys-color-surface-2);
+  background-color: var(--md-sys-color-surface-2);
   z-index: 2;
   top: 0;
 
