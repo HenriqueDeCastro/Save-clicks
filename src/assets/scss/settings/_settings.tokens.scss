@@ -138,11 +138,11 @@
   --md-sys-color-on-surface-light: #1d1c16;
   --md-sys-color-surface-variant-light: #e8e2d0;
   --md-sys-color-on-surface-variant-light: #49473a;
-  --md-sys-color-on-surface-variant-1-light: linear-gradient(0deg, rgba(73, 71, 58, 0.05), rgba(73, 71, 58, 0.05));
-  --md-sys-color-on-surface-variant-2-light: linear-gradient(0deg, rgba(73, 71, 58, 0.08), rgba(73, 71, 58, 0.08));
-  --md-sys-color-on-surface-variant-3-light: linear-gradient(0deg, rgba(73, 71, 58, 0.11), rgba(73, 71, 58, 0.11));
-  --md-sys-color-on-surface-variant-4-light: linear-gradient(0deg, rgba(73, 71, 58, 0.12), rgba(73, 71, 58, 0.12));
-  --md-sys-color-on-surface-variant-5-light: linear-gradient(0deg, rgba(73, 71, 58, 0.14), rgba(73, 71, 58, 0.14));
+  --md-sys-color-on-surface-variant-1-light: linear-gradient(0deg, #49473a0d, #49473a0d);
+  --md-sys-color-on-surface-variant-2-light: linear-gradient(0deg, #49473a14, #49473a14);
+  --md-sys-color-on-surface-variant-3-light: linear-gradient(0deg, #49473a1c, #49473a1c);
+  --md-sys-color-on-surface-variant-4-light: linear-gradient(0deg, #49473a1f, #49473a1f);
+  --md-sys-color-on-surface-variant-5-light: linear-gradient(0deg, #49473a24, #49473a24);
   --md-sys-color-outline-light: #7a7768;
   --md-sys-color-inverse-on-surface-light: #f5f0e7;
   --md-sys-color-inverse-surface-light: #32302a;
@@ -180,11 +180,11 @@
   --md-sys-color-on-surface-dark: #e7e2d9;
   --md-sys-color-surface-variant-dark: #49473a;
   --md-sys-color-on-surface-variant-dark: #cbc7b5;
-  --md-sys-color-on-surface-variant-1-dark: linear-gradient(0deg, rgba(203, 199, 181, 0.05), rgba(203, 199, 181, 0.05));
-  --md-sys-color-on-surface-variant-2-dark: linear-gradient(0deg, rgba(203, 199, 181, 0.08), rgba(203, 199, 181, 0.08));
-  --md-sys-color-on-surface-variant-3-dark: linear-gradient(0deg, rgba(203, 199, 181, 0.11), rgba(203, 199, 181, 0.11));
-  --md-sys-color-on-surface-variant-4-dark: linear-gradient(0deg, rgba(203, 199, 181, 0.12), rgba(203, 199, 181, 0.12));
-  --md-sys-color-on-surface-variant-5-dark: linear-gradient(0deg, rgba(203, 199, 181, 0.14), rgba(203, 199, 181, 0.14));
+  --md-sys-color-on-surface-variant-1-dark: linear-gradient(0deg, #cbc7b50d, #cbc7b50d);
+  --md-sys-color-on-surface-variant-2-dark: linear-gradient(0deg, #cbc7b514, #cbc7b514);
+  --md-sys-color-on-surface-variant-3-dark: linear-gradient(0deg, #cbc7b51c, #cbc7b51c);
+  --md-sys-color-on-surface-variant-4-dark: linear-gradient(0deg, #cbc7b51f, #cbc7b51f);
+  --md-sys-color-on-surface-variant-5-dark: linear-gradient(0deg, #cbc7b524, #cbc7b524);
   --md-sys-color-outline-dark: #959181;
   --md-sys-color-inverse-on-surface-dark: #1d1c16;
   --md-sys-color-inverse-surface-dark: #e7e2d9;
@@ -194,6 +194,7 @@
   --md-sys-color-outline-variant-dark: #49473a;
   --md-sys-color-scrim-dark: #000000;
 
+  --teste: rgb(67, 73, 62);
   /* display - large */
   --md-sys-typescale-display-large-font-family-name: "Google Sans Text",sans-serif;
   --md-sys-typescale-display-large-font-family-style: Regular;

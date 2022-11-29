@@ -1,7 +1,7 @@
 import { ScrimService } from './core/services/scrim/scrim.service';
 import { DrawerService } from './core/services/drawer/drawer.service';
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
+import { delay, Observable } from 'rxjs';
 import { ThemingService } from './core/services/theming/theming.service';
 
 @Component({
