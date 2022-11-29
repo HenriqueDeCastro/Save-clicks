@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MdSysCardModule } from 'src/app/shared/md-sys/md-sys-card/md-sys-card.module';
 
 import { HomeComponent } from './home.component';
 
@@ -8,7 +9,8 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      declarations: [HomeComponent],
+      imports: [MdSysCardModule]
     })
     .compileComponents();
 

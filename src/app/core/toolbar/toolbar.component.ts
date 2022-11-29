@@ -1,4 +1,4 @@
-import { delay, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Component } from '@angular/core';
 import { ColorScheme } from 'src/app/shared/classes/types';
 import { ThemingService } from '../services/theming/theming.service';

@@ -1,0 +1,63 @@
+@use '/src/assets/scss/tools/tools.colors.scss' as colors;
+
+.md-sys-card-alert {
+  pointer-events: none;
+}
+
+.md-sys-card-elevated {
+  box-shadow: var(--md-sys-elevation-1);
+}
+
+.md-sys-card-outlined {
+  border: 1px solid colors.define-color(--md-sys-color-outline);
+}
+
+.md-sys-card-filled, .md-sys-card-elevated {
+  &--primary {
+    background-color: colors.define-color(--md-sys-color-primary-container);
+  }
+
+  &--secondary {
+    background-color: colors.define-color(--md-sys-color-secondary-container);
+  }
+
+  &--tertiary {
+    background-color: colors.define-color(--md-sys-color-tertiary-container);
+  }
+
+  &--surface {
+    background-color: colors.define-color(--md-sys-color-surface);
+  }
+}
+
+.md-sys-card-filled, .md-sys-card-elevated, .md-sys-card-outlined {
+  position: relative;
+  border-radius: 12px;
+  color: colors.define-color(--md-sys-color-on-surface);
+
+  &--disabled {
+    pointer-events: none;
+    opacity: .38;
+  }
+
+  &:before {
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+  }
+
+  &:hover:before {
+    box-shadow: var(--md-sys-elevation-1);
+    background: colors.define-color(--md-sys-color-on-surface-variant-2);
+  }
+
+  &:focus:before {
+    background: colors.define-color(--md-sys-color-on-surface-variant-4);
+  }
+
+  &:active:before {
+    background: colors.define-color(--md-sys-color-on-surface-variant-4);
+  }
+}
