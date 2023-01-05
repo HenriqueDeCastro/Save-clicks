@@ -8,7 +8,7 @@ describe('MdSysCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MdSysCardComponent ]
+      declarations: [MdSysCardComponent]
     })
     .compileComponents();
 

@@ -1,5 +1,5 @@
 <ng-container *ngIf="{value: showDrawer$ | async} as showDrawer">
-  <div class="doc-app" [ngClass]="showDrawer.value? 'noscroll' : 'scroll'">
+  <div class="body-app body-medium" [ngClass]="showDrawer.value? 'noscroll' : 'scroll'">
     <header>
       <f1-data-toolbar></f1-data-toolbar>
     </header>
@@ -13,12 +13,12 @@
       <md-sys-drawer [show]="showDrawer.value!"></md-sys-drawer>
     </nav>
 
-    <main class="body-medium">
+    <main>
       <router-outlet></router-outlet>
     </main>
 
     <footer>
-      © 2022 This website is unofficial and is not associated in any way with the Formula 1 companies. F1, FORMULA ONE, FORMULA 1, FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX and related marks are trade marks of Formula One Licensing B.V.
+      <f1-data-footer></f1-data-footer>
     </footer>
   </div>
 </ng-container>

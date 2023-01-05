@@ -1,5 +1,4 @@
 html, body {
-  height: 100%;
   margin: 0;
   font-family: "Google Sans Text", sans-serif;
   background-color: var(--md-sys-color-background);
@@ -9,4 +8,8 @@ html, body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h2 {
+  font-weight: normal;
 }

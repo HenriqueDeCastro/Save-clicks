@@ -1,0 +1,23 @@
+.md-sys-alert {
+  padding: var(--md-sys-padding-card-small);
+
+  &__icon {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .md-sys-alert {
+    display: flex;
+    align-items: center;
+    padding: var(--md-sys-padding-card-medium);
+
+    &__icon {
+      display: block;
+    }
+
+    &__label {
+      margin-left: 16px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<md-sys-card type="filled" [color]="color" [alert]="true">
+  <div class="md-sys-alert tertiary-text">
+    <ng-container *ngIf="icon">
+      <span class="md-sys-alert__icon material-icons" [innerHTML]="icon"></span>
+    </ng-container>
+    <div class="md-sys-alert__label">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</md-sys-card>
