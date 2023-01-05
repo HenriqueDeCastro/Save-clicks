@@ -42,4 +42,13 @@ describe('MdSysDrawerComponent', () => {
     component.changeStatusDrawer();
     expect(drawerServiceChangeSpy).toHaveBeenCalled();
   });
+
+  it('should create list of buttons from buttonList', () => {
+    fixture.detectChanges();
+
+    const mdSysDrawerNavigationContainerListElement = fixture.debugElement.nativeElement.querySelector('.md-sys-drawer__navigation-container__list');
+    const buttonsListElement = mdSysDrawerNavigationContainerListElement.querySelectorAll('md-sys-nav-button');
+
+    expect(buttonsListElement.length).toBe(7);
+  });
 });

@@ -1,0 +1,21 @@
+<div class="title-container">
+  <h1 class="primary-text title-large" translate="no">F1 Data</h1>
+  <span class="title-container__subtitle body-small">F1 Database is a fan-to-fan project.</span>
+</div>
+
+<div class="card-container">
+  <ng-container *ngFor="let card of cardsList; let last = last;">
+    <md-sys-card type="filled" [alert]="true">
+      <div class="card-container__card">
+        <div class="card-container__card__icon-container">
+          <span class="material-icons-outlined" [innerHTML]="card.icon"></span>
+        </div>
+        <span class="card-container__card__title body-large">{{card.title}}</span>
+        <span class="card-container__card__description">{{card.description}}</span>
+      </div>
+    </md-sys-card>
+    <ng-container *ngIf="!last">
+      <md-sys-divider></md-sys-divider>
+    </ng-container>
+  </ng-container>
+</div>

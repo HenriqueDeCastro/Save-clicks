@@ -3,8 +3,7 @@ import { DrawerService } from 'src/app/core/services/drawer/drawer.service';
 
 @Component({
   selector: 'f1-data-drawer-button',
-  templateUrl: './drawer-button.component.html',
-  styleUrls: ['./drawer-button.component.scss']
+  template: '<md-sys-icon-button [icon]="icon" (click)="showDrawer()"></md-sys-icon-button>'
 })
 export class DrawerButtonComponent {
 

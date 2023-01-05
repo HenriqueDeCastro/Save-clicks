@@ -26,10 +26,18 @@ describe('NavComponent', () => {
 
     fixture = TestBed.createComponent(NavComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should create list of buttons from buttonList', () => {
+    fixture.detectChanges();
+
+    const buttonsNavigationContainerElement = fixture.debugElement.nativeElement.querySelector('.buttons-navigation-container');
+    const buttonsListElement = buttonsNavigationContainerElement.querySelectorAll('md-sys-nav-button');
+
+    expect(buttonsListElement.length).toBe(5);
   });
 });

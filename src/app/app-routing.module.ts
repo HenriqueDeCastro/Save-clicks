@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AppRoutesEnum } from './shared/classes/enums';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: AppRoutesEnum.HOME,
     loadChildren:() => import('./modules/home/home.module').then((m) => m.HomeModule),
   },
   {

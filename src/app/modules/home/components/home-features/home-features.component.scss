@@ -1,0 +1,53 @@
+.card-scroll-container {
+  display: grid;
+  grid-column: 6;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 1fr;
+  margin: -12px;
+  padding: 12px 12px;
+  overflow-x: auto;
+  gap: 12px;
+
+  md-sys-card > .md-sys-card-filled  {
+    height: 100%;
+  }
+
+  .card-route {
+    padding: var(--md-sys-padding-card-small);
+    display: flex;
+    flex-direction: column;
+    min-width: 108px;
+
+    &__icon {
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      font-weight: bold;
+    }
+
+    &__description {
+      margin-top: 3px;
+      font-weight: lighter;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .card-scroll-container {
+    grid-column: 5;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: hidden;
+
+    .card-route {
+      padding: var(--md-sys-padding-card-medium);
+    }
+  }
+}
+
+@media screen and (min-width: 1125px) {
+  .card-scroll-container {
+    grid-column: 6;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

@@ -4,15 +4,17 @@
   </div>
 
   <div class="buttons-navigation-container">
-    <md-sys-nav-button label="Home" icon="&#xe88a;" route="/home"></md-sys-nav-button>
-    <md-sys-nav-button label="Drivers" icon="&#xea2d;" route="/drivers"></md-sys-nav-button>
-    <md-sys-nav-button label="Teams" icon="&#xe613;" route="/teams"></md-sys-nav-button>
-    <md-sys-nav-button label="Circuits" icon="&#xe80b;" route="/circuits" class="button-circuits"></md-sys-nav-button>
-    <md-sys-nav-button label="Seasons" icon="&#xebcc;" route="/seasons"></md-sys-nav-button>
+    <ng-container *ngFor="let button of buttonList">
+      <md-sys-nav-button
+        [label]="button.title"
+        [icon]="button.icon"
+        [route]="button.route!"
+        [class.button-desktop]="button.hideMobile">
+      </md-sys-nav-button>
+    </ng-container>
   </div>
 
   <div class="button-theme">
     <f1-data-theme-button></f1-data-theme-button>
   </div>
-
 </md-sys-navigation>

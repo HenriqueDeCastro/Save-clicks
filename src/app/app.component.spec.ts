@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of } from 'rxjs';
 import { AppComponent } from './app.component';
+import { FooterModule } from './core/footer/footer.module';
 import { NavModule } from './core/nav/nav.module';
 import { DrawerService } from './core/services/drawer/drawer.service';
 import { ScrimService } from './core/services/scrim/scrim.service';
@@ -22,7 +23,8 @@ describe('AppComponent', () => {
         ToolbarModule,
         NavModule,
         MdSysScrimModule,
-        MdSysDrawerModule
+        MdSysDrawerModule,
+        FooterModule
       ],
       providers: [
         ThemingService,
@@ -43,16 +45,16 @@ describe('AppComponent', () => {
   it('should display .noscroll when showDrawer$ is true', () => {
     component.showDrawer$ = of(true);
     fixture.detectChanges();
-    const noScrollElement = fixture.debugElement.nativeElement.querySelectorAll('.noscroll');
+    const noScrollElement = fixture.debugElement.nativeElement.querySelector('.noscroll');
     expect(noScrollElement).not.toBeNull();
-    expect(noScrollElement[0]).not.toBeNull();
+    expect(noScrollElement).not.toBeNull();
   });
 
   it('should display .scroll when showDrawer$ is false', () => {
     component.showDrawer$ = of(false);
     fixture.detectChanges();
-    const scrollElement = fixture.debugElement.nativeElement.querySelectorAll('.scroll');
+    const scrollElement = fixture.debugElement.nativeElement.querySelector('.scroll');
     expect(scrollElement).not.toBeNull();
-    expect(scrollElement[0]).not.toBeNull();
+    expect(scrollElement).not.toBeNull();
   });
 });

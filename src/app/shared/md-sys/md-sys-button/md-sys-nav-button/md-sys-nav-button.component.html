@@ -7,9 +7,9 @@
     routerLinkActive>
     <span
       class="md-sys-nav-button-extended__icon"
-      [ngClass]="routerLink.isActive? 'on-secondary-container-text material-icons': 'on-surface-variant-text material-icons-outlined'">
-        {{icon}}
-      </span>
+      [ngClass]="routerLink.isActive? 'on-secondary-container-text material-icons': 'on-surface-variant-text material-icons-outlined'"
+      [innerHTML]="icon">
+    </span>
     <span class="title-medium" [ngClass]="routerLink.isActive? 'on-secondary-container-text' : 'on-surface-variant-text'">
         {{label}}
     </span>
@@ -28,8 +28,8 @@
       </div>
       <span
         class="md-sys-nav-button__icon-container__icon"
-        [ngClass]="routerLink.isActive? 'on-secondary-container-text material-icons': 'on-surface-variant-text material-icons-outlined'">
-          {{icon}}
+        [ngClass]="routerLink.isActive? 'on-secondary-container-text material-icons': 'on-surface-variant-text material-icons-outlined'"
+        [innerHTML]="icon">
        </span>
     </div>
     <span class="label-medium md-sys-nav-button__label" [ngClass]="routerLink.isActive? 'md-sys-nav-button__label--active on-surface-text' : 'on-surface-variant-text'">
