@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'f1-data-home',
+  selector: 'save-clicks-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

@@ -32,7 +32,6 @@
 .md-sys-card-filled, .md-sys-card-elevated, .md-sys-card-outlined {
   position: relative;
   border-radius: 12px;
-  color: var(--md-sys-color-on-surface);
 
   &--disabled {
     pointer-events: none;

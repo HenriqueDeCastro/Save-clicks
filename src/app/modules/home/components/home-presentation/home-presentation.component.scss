@@ -5,10 +5,6 @@
     margin: 0;
     font-weight: bold;
   }
-
-  &__subtitle {
-    font-weight: lighter;
-  }
 }
 
 .card-container {
@@ -43,7 +39,6 @@
 
     &__description {
       grid-area: card-description;
-      font-weight: lighter;
     }
   }
 }

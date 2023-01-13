@@ -46,7 +46,7 @@ describe('ToolbarComponent', () => {
     fixture.detectChanges();
     const imgElement = fixture.debugElement.nativeElement.querySelector('img');
     expect(imgElement).not.toBeNull();
-    expect(imgElement['src']).toContain('logo-dark-theme.svg');
+    expect(imgElement['src']).toContain('http://localhost/assets/imgs/logo-dark.svg');
   });
 
   it('should show image and have as src ./logo-light-theme when theme is light', () => {
@@ -54,7 +54,7 @@ describe('ToolbarComponent', () => {
     fixture.detectChanges();
     const imgElement = fixture.debugElement.nativeElement.querySelector('img');
     expect(imgElement).not.toBeNull();
-    expect(imgElement['src']).toContain('logo-light-theme.svg');
+    expect(imgElement['src']).toContain('http://localhost/assets/imgs/logo-light.svg');
   });
 
   it('should navigate to home page when image is clicked',

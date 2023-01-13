@@ -49,6 +49,6 @@ describe('MdSysDrawerComponent', () => {
     const mdSysDrawerNavigationContainerListElement = fixture.debugElement.nativeElement.querySelector('.md-sys-drawer__navigation-container__list');
     const buttonsListElement = mdSysDrawerNavigationContainerListElement.querySelectorAll('md-sys-nav-button');
 
-    expect(buttonsListElement.length).toBe(7);
+    expect(buttonsListElement.length).toBe(11);
   });
 });

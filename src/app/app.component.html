@@ -1,7 +1,7 @@
 <ng-container *ngIf="{value: showDrawer$ | async} as showDrawer">
   <div class="body-app body-medium" [ngClass]="showDrawer.value? 'noscroll' : 'scroll'">
     <header>
-      <f1-data-toolbar></f1-data-toolbar>
+      <save-clicks-toolbar></save-clicks-toolbar>
     </header>
 
     <ng-container *ngIf="{value: showScrim$ | async} as showScrim">
@@ -9,7 +9,7 @@
     </ng-container>
 
     <nav>
-      <f1-data-nav></f1-data-nav>
+      <save-clicks-nav></save-clicks-nav>
       <md-sys-drawer [show]="showDrawer.value!"></md-sys-drawer>
     </nav>
 
@@ -18,7 +18,7 @@
     </main>
 
     <footer>
-      <f1-data-footer></f1-data-footer>
+      <save-clicks-footer></save-clicks-footer>
     </footer>
   </div>
 </ng-container>

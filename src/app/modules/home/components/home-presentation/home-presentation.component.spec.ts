@@ -24,15 +24,6 @@ describe('HomePresentationComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should show current year in sentence', () => {
-    fixture.detectChanges();
-    const currentYear = new Date().getFullYear().toString();
-    const cardContainerElement = fixture.debugElement.nativeElement.querySelector('.card-container');
-    const cardsListElement = cardContainerElement.querySelectorAll('md-sys-card');
-
-    expect(cardsListElement[0].textContent).toContain(currentYear);
-  });
-
   it('should create list of cards from cardsList', () => {
     fixture.detectChanges();
 

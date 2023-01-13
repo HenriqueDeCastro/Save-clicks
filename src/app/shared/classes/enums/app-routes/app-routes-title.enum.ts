@@ -1,9 +1,13 @@
 export enum AppRoutesTitleEnum {
-  HOME = 'Home',
-  DRIVERS = 'Drivers',
-  TEAMS = 'Teams',
-  CIRCUITS = 'Circuits',
-  SEASONS = 'Seasons',
-  RACES = 'Races',
-  NEWS = 'News'
+  HOME = 'Início',
+  BANKS = 'Bancos',
+  CEP = 'CEP',
+  CNPJ = 'CNPJ',
+  FIPE = 'FIPE',
+  DDD = 'DDD',
+  HOLIDAYS = 'Feriados Nacionais',
+  IBGE = 'IBGE',
+  ISBN = 'ISBN',
+  NCM = 'NCM',
+  REGISTER = 'Registro BR'
 }

@@ -43,7 +43,7 @@ describe('ThemeButtonComponent', () => {
     fixture.detectChanges();
     const labelSwitchThemeElement = fixture.debugElement.queryAll(By.css('.theme-button-extended__label'));
     expect(labelSwitchThemeElement[0].nativeElement).not.toBeNull();
-    expect(labelSwitchThemeElement[0].nativeElement.textContent).toContain('Switch to dark mode');
+    expect(labelSwitchThemeElement[0].nativeElement.textContent).toContain('Mudar para o modo escuro');
   });
 
   it('should show text indicating the theme light when the button is of the extended type', () => {
@@ -52,6 +52,6 @@ describe('ThemeButtonComponent', () => {
     fixture.detectChanges();
     const labelSwitchThemeElement = fixture.debugElement.queryAll(By.css('.theme-button-extended__label'));
     expect(labelSwitchThemeElement[0].nativeElement).not.toBeNull();
-    expect(labelSwitchThemeElement[0].nativeElement.textContent).toContain('Switch to light mode');
+    expect(labelSwitchThemeElement[0].nativeElement.textContent).toContain('Mudar para o modo claro');
   });
 });

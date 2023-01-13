@@ -4,7 +4,7 @@ import { ThemingService } from 'src/app/core/services/theming/theming.service';
 import { ColorScheme } from '../../classes/types';
 
 @Component({
-  selector: 'f1-data-theme-button',
+  selector: 'save-clicks-theme-button',
   templateUrl: './theme-button.component.html',
   styleUrls: ['./theme-button.component.scss']
 })

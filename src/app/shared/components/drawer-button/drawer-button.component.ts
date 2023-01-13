@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { DrawerService } from 'src/app/core/services/drawer/drawer.service';
 
 @Component({
-  selector: 'f1-data-drawer-button',
+  selector: 'save-clicks-drawer-button',
   template: '<md-sys-icon-button [icon]="icon" (click)="showDrawer()"></md-sys-icon-button>'
 })
 export class DrawerButtonComponent {

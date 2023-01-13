@@ -5,7 +5,7 @@ import { ThemingService } from '../services/theming/theming.service';
 import { AppRoutesEnum } from 'src/app/shared/classes/enums';
 
 @Component({
-  selector: 'f1-data-toolbar',
+  selector: 'save-clicks-toolbar',
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss']
 })
