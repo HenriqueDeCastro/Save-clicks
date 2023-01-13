@@ -2,7 +2,7 @@
   <ng-container *ngIf="extended; else compact">
     <button class="theme-button-extended on-surface-variant-text cursor-pointer" (click)="changeTheme(themeToApply)">
       <span class="theme-button-extended__icon material-icons-outlined">{{themeToApply == 'dark'? '&#xe51c;' : '&#xe518;'}}</span>
-      <span class="theme-button-extended__label title-medium">Switch to {{themeToApply}} mode</span>
+      <span class="theme-button-extended__label title-medium">Mudar para o modo {{themeToApply == 'dark'? 'escuro' : 'claro'}}</span>
     </button>
   </ng-container>
   <ng-template #compact>

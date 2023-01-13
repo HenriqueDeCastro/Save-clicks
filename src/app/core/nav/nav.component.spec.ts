@@ -38,6 +38,6 @@ describe('NavComponent', () => {
     const buttonsNavigationContainerElement = fixture.debugElement.nativeElement.querySelector('.buttons-navigation-container');
     const buttonsListElement = buttonsNavigationContainerElement.querySelectorAll('md-sys-nav-button');
 
-    expect(buttonsListElement.length).toBe(5);
+    expect(buttonsListElement.length).toBe(6);
   });
 });

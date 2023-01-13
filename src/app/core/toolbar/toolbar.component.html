@@ -1,6 +1,6 @@
 <div class="toolbar">
-  <f1-data-drawer-button class="toolbar__button-drawer" icon="&#xe5d2;"></f1-data-drawer-button>
+  <save-clicks-drawer-button class="toolbar__button-drawer" icon="&#xe5d2;"></save-clicks-drawer-button>
   <ng-container *ngIf="currentTheme$ | async as currentTheme">
-    <img src="assets/img/logo-{{currentTheme}}-theme.svg" alt="Logo F1 Data" class="toolbar__img cursor-pointer" [routerLink]="appRoutes.HOME">
+    <img src="assets/imgs/logo-{{currentTheme}}.svg" alt="Logo save-clicks" class="toolbar__img cursor-pointer" [routerLink]="appRoutes.HOME">
   </ng-container>
 </div>

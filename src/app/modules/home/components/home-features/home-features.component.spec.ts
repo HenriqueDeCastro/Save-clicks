@@ -29,6 +29,6 @@ describe('HomeFeaturesComponent', () => {
     const cardScrollContainerElement = fixture.debugElement.nativeElement.querySelector('.card-scroll-container');
     const cardsListElement = cardScrollContainerElement.querySelectorAll('md-sys-card');
 
-    expect(cardsListElement.length).toBe(6);
+    expect(cardsListElement.length).toBe(10);
   });
 });

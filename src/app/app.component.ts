@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { ThemingService } from './core/services/theming/theming.service';
 
 @Component({
-  selector: 'f1-data-root',
+  selector: 'save-clicks-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

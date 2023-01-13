@@ -1,8 +1,8 @@
 <div class="md-sys-drawer" [class.md-sys-drawer--active]="show">
+  <div class="md-sys-drawer__drawer-button">
+    <save-clicks-drawer-button icon="&#xe9bd;"></save-clicks-drawer-button>
+  </div>
   <div class="md-sys-drawer__navigation-container">
-    <div class="md-sys-drawer__navigation-container__drawer-button">
-      <f1-data-drawer-button icon="&#xe9bd;"></f1-data-drawer-button>
-    </div>
     <div class="md-sys-drawer__navigation-container__list">
       <ng-container *ngFor="let button of buttonList">
         <md-sys-nav-button
@@ -16,6 +16,6 @@
     </div>
   </div>
   <div class="md-sys-drawer__theme-button">
-    <f1-data-theme-button [extended]="true"></f1-data-theme-button>
+    <save-clicks-theme-button [extended]="true"></save-clicks-theme-button>
   </div>
 </div>
