@@ -1,3 +1,4 @@
+import { RouterTestingModule } from '@angular/router/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MdSysCardModule } from 'src/app/shared/md-sys/md-sys-card/md-sys-card.module';
 
@@ -10,7 +11,7 @@ describe('HomeFeaturesComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [HomeFeaturesComponent],
-      imports: [MdSysCardModule]
+      imports: [MdSysCardModule, RouterTestingModule]
     })
     .compileComponents();
 

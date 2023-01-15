@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ThemingService } from 'src/app/core/services/theming/theming.service';
 import { NaviagationElement } from 'src/app/shared/classes/interfaces';
+import { ColorScheme } from 'src/app/shared/classes/types';
 
 @Component({
   selector: 'save-clicks-home-presentation',
@@ -8,9 +11,11 @@ import { NaviagationElement } from 'src/app/shared/classes/interfaces';
 })
 export class HomePresentationComponent {
 
+  currentTheme$: Observable<ColorScheme>;
   cardsList: NaviagationElement[];
 
-  constructor() {
+  constructor(private themingService: ThemingService) {
+    this.currentTheme$ = this.themingService.currentActive();
     this.cardsList = [
       {
         title: 'Sem burocracia',
@@ -18,7 +23,7 @@ export class HomePresentationComponent {
         description: 'Não exigimos login ou cadastro.'
       },
       {
-        title: 'Diversidade da dados',
+        title: 'Diversidade de dados',
         icon: '&#xe9f4;',
         description: `Informações de CNPJ, ISBN, FIPE e muito mais.`
       },

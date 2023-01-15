@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { ColorScheme } from 'src/app/shared/classes/types';
 import { ThemingService } from '../services/theming/theming.service';
 import { AppRoutesEnum } from 'src/app/shared/classes/enums';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'save-clicks-toolbar',
@@ -14,7 +15,7 @@ export class ToolbarComponent {
   currentTheme$: Observable<ColorScheme>;
   appRoutes: typeof AppRoutesEnum;
 
-  constructor(private themingService: ThemingService) {
+  constructor(private themingService: ThemingService, public router: Router) {
     this.currentTheme$ = this.themingService.currentActive();
     this.appRoutes = AppRoutesEnum;
   }

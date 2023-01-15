@@ -8,7 +8,7 @@ const routes: Routes = [
     loadChildren:() => import('./modules/home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: 'not-found',
+    path: 'nao-encontrado',
     loadChildren:() => import('./modules/not-found/not-found.module').then((m) => m.NotFoundModule)
   },
   {
@@ -18,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'not-found',
+    redirectTo: 'nao-encontrado',
     pathMatch: 'full'
   }
 ];

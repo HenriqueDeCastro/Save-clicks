@@ -1,5 +1,7 @@
 <div class="title-container">
-  <h1 class="primary-text title-large" translate="no">Poupa Cliques</h1>
+  <ng-container *ngIf="currentTheme$ | async as currentTheme">
+    <img src="assets/imgs/logo-{{currentTheme}}.svg" alt="Logo Poupa Cliques" class="title-container__title">
+  </ng-container>
   <span class="title-container__subtitle body-small">Centralizando informações do Brasil</span>
 </div>
 
