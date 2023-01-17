@@ -6,19 +6,15 @@
   margin: -12px;
   padding: 12px 12px;
   overflow-x: auto;
-  gap: 12px;
+  gap: var(--md-sys-gap-medium);
   color: var(--md-sys-color-on-tertiary-container);
 
   &::-webkit-scrollbar {
     background-color: transparent;
   }
 
-  md-sys-card > .md-sys-card-filled  {
-    height: 100%;
-  }
-
   .card-route {
-    padding: var(--md-sys-padding-card-small);
+    padding: var(--md-sys-padding-small);
     display: flex;
     flex-direction: column;
     min-width: 108px;
@@ -44,7 +40,7 @@
     overflow-x: hidden;
 
     .card-route {
-      padding: var(--md-sys-padding-card-medium);
+      padding: var(--md-sys-padding-medium);
     }
   }
 }

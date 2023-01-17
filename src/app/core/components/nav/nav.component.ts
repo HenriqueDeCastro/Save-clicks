@@ -8,6 +8,7 @@ import { NaviagationElement } from 'src/app/shared/classes/interfaces';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
+
   buttonList: NaviagationElement[];
 
   constructor() {

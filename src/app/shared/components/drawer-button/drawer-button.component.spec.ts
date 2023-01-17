@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { DrawerService } from 'src/app/core/services/drawer/drawer.service';
+import { DrawerService } from 'src/app/core/services/common/drawer/drawer.service';
 import { MdSysIconButtonModule } from '../../md-sys/md-sys-button/md-sys-icon-button/md-sys-icon-button.module';
 
 import { DrawerButtonComponent } from './drawer-button.component';

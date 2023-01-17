@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DrawerService } from 'src/app/core/services/drawer/drawer.service';
+import { DrawerService } from 'src/app/core/services/common/drawer/drawer.service';
 import { AppRoutesEnum, AppRoutesIconEnum, AppRoutesTitleEnum } from '../../classes/enums';
 import { NaviagationElement } from '../../classes/interfaces';
 

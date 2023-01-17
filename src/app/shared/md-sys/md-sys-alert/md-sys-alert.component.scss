@@ -1,5 +1,5 @@
 .md-sys-alert {
-  padding: var(--md-sys-padding-card-small);
+  padding: var(--md-sys-padding-small);
 
   &__icon {
     display: none;
@@ -10,7 +10,7 @@
   .md-sys-alert {
     display: flex;
     align-items: center;
-    padding: var(--md-sys-padding-card-medium);
+    padding: var(--md-sys-padding-medium);
 
     &__icon {
       display: block;

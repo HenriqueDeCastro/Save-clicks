@@ -1,6 +1,6 @@
 import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 import { BehaviorSubject, map, Observable } from 'rxjs';
-import { ColorScheme } from 'src/app/shared/classes/types';
+import { colorScheme } from 'src/app/shared/classes/types';
 
 @Injectable({
   providedIn: 'root'
@@ -10,13 +10,13 @@ export class ThemingService {
   private readonly colorSchemePrefix: string;
   private readonly localStorageKey: string;
   private renderer: Renderer2;
-  private colorSchemeSubject: BehaviorSubject<ColorScheme>;
+  private colorSchemeSubject: BehaviorSubject<colorScheme>;
 
   constructor(rendererFactory: RendererFactory2) {
     this.colorSchemePrefix = 'color-scheme-';
     this.localStorageKey = 'prefers-color';
     this.renderer = rendererFactory.createRenderer(null, null);
-    this.colorSchemeSubject = new BehaviorSubject<ColorScheme>('light');
+    this.colorSchemeSubject = new BehaviorSubject<colorScheme>('light');
     this.detectPrefersColorScheme();
   }
 
@@ -25,19 +25,19 @@ export class ThemingService {
     this.renderer.addClass(document.body, this.colorSchemePrefix + this.colorSchemeSubject.value);
   }
 
-  update(scheme: ColorScheme): void {
+  update(scheme: colorScheme): void {
     this.removeColorScheme(scheme);
     this.setColorScheme(scheme);
     this.load();
   }
 
-  currentActive(): Observable<ColorScheme> {
+  currentActive(): Observable<colorScheme> {
     return this.colorSchemeSubject.asObservable();
   }
 
-  toApply(): Observable<ColorScheme> {
+  toApply(): Observable<colorScheme> {
     return this.colorSchemeSubject.asObservable()
-      .pipe(map((color: ColorScheme) => color === 'dark' ? 'light' : 'dark'));
+      .pipe(map((color: colorScheme) => color === 'dark' ? 'light' : 'dark'));
   }
 
   private detectPrefersColorScheme(): void {
@@ -46,19 +46,19 @@ export class ThemingService {
   }
 
   private getColorScheme(): void {
-    const localStorageColorScheme = localStorage.getItem(this.localStorageKey) as ColorScheme;
+    const localStorageColorScheme = localStorage.getItem(this.localStorageKey) as colorScheme;
 
     if (localStorageColorScheme) {
       this.colorSchemeSubject.next(localStorageColorScheme);
     }
   }
 
-  private removeColorScheme(scheme: ColorScheme): void {
+  private removeColorScheme(scheme: colorScheme): void {
     localStorage.removeItem(this.localStorageKey);
     this.renderer.removeClass(document.body, this.colorSchemePrefix + (scheme === 'dark' ? 'light' : 'dark'));
   }
 
-  private setColorScheme(scheme: ColorScheme): void {
+  private setColorScheme(scheme: colorScheme): void {
     this.colorSchemeSubject.next(scheme);
     localStorage.setItem(this.localStorageKey, scheme);
   }

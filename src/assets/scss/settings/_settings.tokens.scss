@@ -141,6 +141,8 @@
   --md-sys-color-surface-tint-light: #006e27;
   --md-sys-color-outline-variant-light: #c2c9bd;
   --md-sys-color-scrim-light: #000000;
+  --md-sys-color-skeleton-0-light: #72796f;
+  --md-sys-color-skeleton-100-light: #c2c9bd;
 
   --md-sys-color-surface-1-light: rgba(0, 110, 39, 0.05); // reference primary-color
   --md-sys-color-surface-2-light: rgba(0, 110, 39, 0.08);
@@ -185,6 +187,8 @@
   --md-sys-color-surface-tint-dark: #61df74;
   --md-sys-color-outline-variant-dark: #424940;
   --md-sys-color-scrim-dark: #000000;
+  --md-sys-color-skeleton-0-dark: #8c9389;
+  --md-sys-color-skeleton-100-dark: #424940;
 
   --md-sys-color-surface-1-dark: rgba(97, 222, 116, 0.05); // reference primary-color
   --md-sys-color-surface-2-dark: rgba(97, 222, 116, 0.08);
@@ -324,7 +328,15 @@
   --md-sys-elevation-3: 0px 1px 3px 0px #0000004d,0px 4px 8px 3px #00000026;
 
   /* padding */
-  --md-sys-padding-card-small: 16px;
-  --md-sys-padding-card-medium: 24px;
-  --md-sys-padding-card-large: 32px;
+  --md-sys-padding-small: 16px;
+  --md-sys-padding-medium: 24px;
+  --md-sys-padding-large: 32px;
+
+  /* gap */
+  --md-sys-gap-small: 6px;
+  --md-sys-gap-medium: 12px;
+  --md-sys-gap-large: 24px;
+
+  /* border-radius */
+  --md-sys-border-radius-card: 12px;
 }

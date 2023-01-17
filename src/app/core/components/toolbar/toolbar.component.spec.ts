@@ -4,11 +4,11 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { of, } from 'rxjs';
 import { DrawerButtonModule } from 'src/app/shared/components/drawer-button/drawer-button.module';
 import { MdSysIconButtonModule } from 'src/app/shared/md-sys/md-sys-button/md-sys-icon-button/md-sys-icon-button.module';
-import { ThemingService } from '../services/theming/theming.service';
 
 import { ToolbarComponent } from './toolbar.component';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { ThemingService } from '../../services/common/theming/theming.service';
 
 describe('ToolbarComponent', () => {
   let component: ToolbarComponent;
@@ -24,7 +24,7 @@ describe('ToolbarComponent', () => {
         RouterTestingModule.withRoutes([
           {
             path: AppRoutesEnum.HOME,
-            loadChildren:() => import('../../modules/home/home.module').then((m) => m.HomeModule),
+            loadChildren:() => import('../../../modules/home/home.module').then((m) => m.HomeModule),
           }
         ])
       ],

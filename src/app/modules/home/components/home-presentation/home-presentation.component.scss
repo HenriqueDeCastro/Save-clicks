@@ -12,7 +12,7 @@
 .card-container {
   margin-top: 36px;
   display: grid;
-  gap: 6px;
+  gap: var(--md-sys-gap-small);
 
   &__card {
     display: grid;
@@ -51,7 +51,7 @@
     grid-template-columns: repeat(3, 1fr);
 
     &__card {
-      padding: var(--md-sys-padding-card-medium);
+      padding: var(--md-sys-padding-medium);
       display: flex;
       flex-direction: column;
       align-items: center;

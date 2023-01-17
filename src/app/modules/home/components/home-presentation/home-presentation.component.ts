@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ThemingService } from 'src/app/core/services/theming/theming.service';
+import { ThemingService } from 'src/app/core/services/common/theming/theming.service';
 import { NaviagationElement } from 'src/app/shared/classes/interfaces';
-import { ColorScheme } from 'src/app/shared/classes/types';
+import { colorScheme } from 'src/app/shared/classes/types';
 
 @Component({
   selector: 'save-clicks-home-presentation',
@@ -11,7 +11,7 @@ import { ColorScheme } from 'src/app/shared/classes/types';
 })
 export class HomePresentationComponent {
 
-  currentTheme$: Observable<ColorScheme>;
+  currentTheme$: Observable<colorScheme>;
   cardsList: NaviagationElement[];
 
   constructor(private themingService: ThemingService) {

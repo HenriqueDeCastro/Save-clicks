@@ -1,8 +1,8 @@
-import { ScrimService } from './core/services/scrim/scrim.service';
-import { DrawerService } from './core/services/drawer/drawer.service';
+import { DrawerService } from './core/services/common/drawer/drawer.service';
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ThemingService } from './core/services/theming/theming.service';
+import { ThemingService } from './core/services/common/theming/theming.service';
+import { ScrimService } from './core/services/common/scrim/scrim.service';
 
 @Component({
   selector: 'save-clicks-root',

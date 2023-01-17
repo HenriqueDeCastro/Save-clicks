@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { delay, Observable } from 'rxjs';
-import { ThemingService } from 'src/app/core/services/theming/theming.service';
-import { ColorScheme } from '../../classes/types';
+import { Observable } from 'rxjs';
+import { ThemingService } from 'src/app/core/services/common/theming/theming.service';
+import { colorScheme } from '../../classes/types';
 
 @Component({
   selector: 'save-clicks-theme-button',
@@ -11,13 +11,13 @@ import { ColorScheme } from '../../classes/types';
 export class ThemeButtonComponent {
 
   @Input() extended!: boolean;
-  themeToApply$: Observable<ColorScheme>;
+  themeToApply$: Observable<colorScheme>;
 
   constructor(private themingService: ThemingService) {
     this.themeToApply$ = this.themingService.toApply();
   }
 
-  changeTheme(scheme: ColorScheme): void {
+  changeTheme(scheme: colorScheme): void {
     this.themingService.update(scheme);
   }
 }
