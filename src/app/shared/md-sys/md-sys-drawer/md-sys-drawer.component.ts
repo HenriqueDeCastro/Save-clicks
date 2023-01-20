@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { DrawerService } from 'src/app/core/services/common/drawer/drawer.service';
 import { AppRoutesEnum, AppRoutesIconEnum, AppRoutesTitleEnum } from '../../classes/enums';
-import { NaviagationElement } from '../../classes/interfaces';
+import { INaviagationElement } from '../../classes/interfaces';
 
 @Component({
   selector: 'md-sys-drawer',
@@ -11,7 +11,7 @@ import { NaviagationElement } from '../../classes/interfaces';
 export class MdSysDrawerComponent {
 
   @Input() show!: boolean;
-  buttonList: NaviagationElement[];
+  buttonList: INaviagationElement[];
 
   constructor(private drawerService: DrawerService) {
     this.buttonList = Object.keys(AppRoutesEnum)

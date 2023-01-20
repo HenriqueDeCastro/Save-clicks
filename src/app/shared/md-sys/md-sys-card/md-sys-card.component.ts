@@ -13,6 +13,7 @@ export class MdSysCardComponent {
   @Input() disabled: boolean;
   @Input() alert: boolean;
   @Input() loading: boolean;
+  @Input() flex!: string;
 
   constructor() {
     this.type = 'elevated';

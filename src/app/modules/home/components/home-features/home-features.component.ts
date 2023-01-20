@@ -1,7 +1,7 @@
 import { AppRoutesDescriptionEnum } from './../../../../shared/classes/enums/app-routes/app-routes-description.enum';
 import { Component } from '@angular/core';
 import { AppRoutesEnum, AppRoutesIconEnum, AppRoutesTitleEnum } from 'src/app/shared/classes/enums';
-import { NaviagationElement } from 'src/app/shared/classes/interfaces';
+import { INaviagationElement } from 'src/app/shared/classes/interfaces';
 
 @Component({
   selector: 'save-clicks-home-features',
@@ -10,7 +10,7 @@ import { NaviagationElement } from 'src/app/shared/classes/interfaces';
 })
 export class HomeFeaturesComponent {
 
-  cardsList: NaviagationElement[];
+  cardsList: INaviagationElement[];
 
   constructor() {
     this.cardsList = Object.keys(AppRoutesEnum)

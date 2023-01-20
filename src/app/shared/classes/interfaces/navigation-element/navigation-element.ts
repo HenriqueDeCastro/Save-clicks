@@ -1,4 +1,4 @@
-export interface NaviagationElement {
+export interface INaviagationElement {
   title: string;
   icon: string;
   route?: string;

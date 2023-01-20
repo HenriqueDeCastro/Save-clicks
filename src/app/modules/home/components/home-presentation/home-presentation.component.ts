@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ThemingService } from 'src/app/core/services/common/theming/theming.service';
-import { NaviagationElement } from 'src/app/shared/classes/interfaces';
+import { INaviagationElement } from 'src/app/shared/classes/interfaces';
 import { colorScheme } from 'src/app/shared/classes/types';
 
 @Component({
@@ -12,7 +12,7 @@ import { colorScheme } from 'src/app/shared/classes/types';
 export class HomePresentationComponent {
 
   currentTheme$: Observable<colorScheme>;
-  cardsList: NaviagationElement[];
+  cardsList: INaviagationElement[];
 
   constructor(private themingService: ThemingService) {
     this.currentTheme$ = this.themingService.currentActive();

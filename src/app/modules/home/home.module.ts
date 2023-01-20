@@ -6,7 +6,7 @@ import { HomeComponent } from './home.component';
 import { HomeFeaturesModule } from './components/home-features/home-features.module';
 import { HomePresentationModule } from './components/home-presentation/home-presentation.module';
 import { MdSysAlertModule } from 'src/app/shared/md-sys/md-sys-alert/md-sys-alert.module';
-import { HomeFeeModule } from './components/home-fee/home-fee.module';
+import { FeeCardsModule } from 'src/app/shared/components/fee-cards/fee-cards.module';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -16,7 +16,7 @@ import { HomeFeeModule } from './components/home-fee/home-fee.module';
     MdSysAlertModule,
     HomeFeaturesModule,
     HomePresentationModule,
-    HomeFeeModule
+    FeeCardsModule
   ]
 })
 export class HomeModule { }

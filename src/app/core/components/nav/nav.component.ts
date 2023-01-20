@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AppRoutesEnum, AppRoutesIconEnum, AppRoutesTitleEnum } from 'src/app/shared/classes/enums';
-import { NaviagationElement } from 'src/app/shared/classes/interfaces';
+import { INaviagationElement } from 'src/app/shared/classes/interfaces';
 
 @Component({
   selector: 'save-clicks-nav',
@@ -9,7 +9,7 @@ import { NaviagationElement } from 'src/app/shared/classes/interfaces';
 })
 export class NavComponent {
 
-  buttonList: NaviagationElement[];
+  buttonList: INaviagationElement[];
 
   constructor() {
     this.buttonList = [
