@@ -1,0 +1,26 @@
+.fee-cards {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--md-sys-gap-medium);
+  }
+
+  &__card {
+    flex: 1;
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--md-sys-padding-small);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fee-cards {
+    &__container {
+      flex-direction: row;
+    }
+  }
+}
+

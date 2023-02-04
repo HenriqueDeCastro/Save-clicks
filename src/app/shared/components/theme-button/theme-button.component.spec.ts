@@ -1,10 +1,10 @@
 import { By } from '@angular/platform-browser';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ThemingService } from 'src/app/core/services/theming/theming.service';
 import { MdSysIconButtonModule } from '../../md-sys/md-sys-button/md-sys-icon-button/md-sys-icon-button.module';
 
 import { ThemeButtonComponent } from './theme-button.component';
 import { of } from 'rxjs';
+import { ThemingService } from 'src/app/core/services/common/theming/theming.service';
 
 describe('ThemeButtonComponent', () => {
   let component: ThemeButtonComponent;

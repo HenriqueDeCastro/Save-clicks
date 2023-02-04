@@ -1,7 +1,13 @@
-<section class="save-clicks-home-presentation">
+<section class="presentation">
   <save-clicks-home-presentation></save-clicks-home-presentation>
 </section>
 
 <section class="features">
+  <h2>Funções</h2>
   <save-clicks-home-features></save-clicks-home-features>
+</section>
+
+<section class="fee">
+    <h2>Taxas</h2>
+    <save-clicks-fee-cards [fee]="(fee$ | async)!"></save-clicks-fee-cards>
 </section>

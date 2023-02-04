@@ -1,0 +1,9 @@
+<ng-container [ngSwitch]="appearance">
+  <ng-container *ngSwitchCase="'card'">
+    <div class="md-sys-skeleton-container md-sys-skeleton-container__card">
+      <md-sys-card type="filled" [alert]="true">
+        <div class="md-sys-skeleton md-sys-skeleton-item__card" [ngStyle]="{ height: height}"></div>
+      </md-sys-card>
+    </div>
+  </ng-container>
+</ng-container>

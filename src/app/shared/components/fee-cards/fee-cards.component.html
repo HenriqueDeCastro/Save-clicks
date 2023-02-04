@@ -1,0 +1,21 @@
+<div class="fee-cards__container">
+  <ng-container *ngIf="fee; else loading">
+    <ng-container *ngFor="let item of fee">
+      <div class="fee-cards__card">
+        <md-sys-card [alert]="true" type="outlined">
+          <div class="fee-cards__card__content title-medium">
+            <span>{{item.nome}}</span>
+            <span>{{item.valor}}%</span>
+          </div>
+        </md-sys-card>
+      </div>
+    </ng-container>
+  </ng-container>
+  <ng-template #loading>
+    <ng-container *ngFor="let item of [].constructor(3)">
+      <div class="fee-cards__card">
+        <md-sys-skeleton appearance="card" height="55px"></md-sys-skeleton>
+      </div>
+    </ng-container>
+  </ng-template>
+</div>

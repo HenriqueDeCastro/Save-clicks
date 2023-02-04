@@ -1,0 +1,25 @@
+.md-sys-skeleton {
+  animation: skeleton-loading 1s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+}
+
+.md-sys-skeleton-item {
+  &__card {
+    border-radius: var(--md-sys-border-radius-card);
+
+    &:before {
+      width: 100%;
+      height: 100%;
+      content: "";
+      position: absolute;
+    }
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: var(--md-sys-color-skeleton-0);
+  }
+  100% {
+    background-color: var(--md-sys-color-skeleton-100);
+  }
+}

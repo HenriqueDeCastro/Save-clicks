@@ -1,6 +1,6 @@
 import { Renderer2, RendererFactory2 } from '@angular/core';
 import { async, TestBed } from '@angular/core/testing';
-import { ColorScheme } from 'src/app/shared/classes/types';
+import { colorScheme } from 'src/app/shared/classes/types';
 
 import { ThemingService } from './theming.service';
 
@@ -31,13 +31,13 @@ describe('ThemingService', () => {
     should get color from localstorage when there is value in ${localStorageKey}`, async(() => {
     localStorage.setItem(localStorageKey, 'dark')
     service.load();
-    service.currentActive().subscribe((colorSchemeSubjectValue: ColorScheme) => expect(colorSchemeSubjectValue).toBe('dark'));
+    service.currentActive().subscribe((colorSchemeSubjectValue: colorScheme) => expect(colorSchemeSubjectValue).toBe('dark'));
   }));
 
   it(`#${ThemingService.prototype.load.name}
     should keep color from color Scheme Subject when there is no value in ${localStorageKey}`, async(() => {
     service.load();
-    service.currentActive().subscribe((colorSchemeSubjectValue: ColorScheme) => expect(colorSchemeSubjectValue).toBe('light'));
+    service.currentActive().subscribe((colorSchemeSubjectValue: colorScheme) => expect(colorSchemeSubjectValue).toBe('light'));
   }));
 
   it(`#${ThemingService.prototype.load.name}
@@ -53,7 +53,7 @@ describe('ThemingService', () => {
     service.update('dark');
     const localStorageValue = localStorage.getItem(localStorageKey);
 
-    service.currentActive().subscribe((colorSchemeSubjectValue: ColorScheme) => expect(colorSchemeSubjectValue).toBe('dark'));
+    service.currentActive().subscribe((colorSchemeSubjectValue: colorScheme) => expect(colorSchemeSubjectValue).toBe('dark'));
     expect(localStorageValue).toBe('dark');
   }));
 
@@ -69,11 +69,11 @@ describe('ThemingService', () => {
 
   it(`#${ThemingService.prototype.currentActive.name}
     should return value of colorSchemeSubject`, async(() => {
-    service.currentActive().subscribe((colorSchemeSubjectValue: ColorScheme) => expect(colorSchemeSubjectValue).toBe('light'));
+    service.currentActive().subscribe((colorSchemeSubjectValue: colorScheme) => expect(colorSchemeSubjectValue).toBe('light'));
   }));
 
   it(`#${ThemingService.prototype.toApply.name}
     should return value of theme not being applied`, async(() => {
-    service.toApply().subscribe((colorSchemeSubjectValue: ColorScheme) => expect(colorSchemeSubjectValue).toBe('dark'));
+    service.toApply().subscribe((colorSchemeSubjectValue: colorScheme) => expect(colorSchemeSubjectValue).toBe('dark'));
   }));
 });

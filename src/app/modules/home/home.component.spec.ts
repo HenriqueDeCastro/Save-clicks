@@ -5,6 +5,8 @@ import { HomeFeaturesModule } from './components/home-features/home-features.mod
 import { HomePresentationModule } from './components/home-presentation/home-presentation.module';
 
 import { HomeComponent } from './home.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { FeeCardsModule } from 'src/app/shared/components/fee-cards/fee-cards.module';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -17,7 +19,9 @@ describe('HomeComponent', () => {
         MdSysAlertModule,
         HomeFeaturesModule,
         HomePresentationModule,
-        RouterTestingModule
+        FeeCardsModule,
+        RouterTestingModule,
+        HttpClientTestingModule
       ]
     })
     .compileComponents();

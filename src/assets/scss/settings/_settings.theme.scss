@@ -40,6 +40,8 @@ $themes: (
     '--md-sys-color-surface-tint': var(--md-sys-color-surface-tint-light),
     '--md-sys-color-outline-variant': var(--md-sys-color-outline-variant-light),
     '--md-sys-color-scrim': var(--md-sys-color-scrim-light),
+    '--md-sys-color-skeleton-0': var(--md-sys-color-skeleton-0-light),
+    '--md-sys-color-skeleton-100': var(--md-sys-color-skeleton-100-light)
 ),
   dark: (
     '--md-sys-color-primary': var(--md-sys-color-primary-dark),
@@ -82,6 +84,8 @@ $themes: (
     '--md-sys-color-surface-tint': var(--md-sys-color-surface-tint-dark),
     '--md-sys-color-outline-variant': var(--md-sys-color-outline-variant-dark),
     '--md-sys-color-scrim': var(--md-sys-color-scrim-dark),
+    '--md-sys-color-skeleton-0': var(--md-sys-color-skeleton-0-dark),
+    '--md-sys-color-skeleton-100': var(--md-sys-color-skeleton-100-dark)
   )
 );
 
